@@ -24,3 +24,4 @@
     * `$gray` is now $`gray-100`, there are more grayscales in bs4
 * Removed Glyphicons and switched to FontAwesome
     * renamed all icon classes from `glyphicons-*` to `fa-*`
+* Removed old shim files for IE9-
