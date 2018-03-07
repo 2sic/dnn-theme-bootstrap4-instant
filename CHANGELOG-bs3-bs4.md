@@ -5,9 +5,9 @@
     * Files are now located in *node_modules* instead of *bower_components*
     * Versions are locked with *package.lock*
 * Renamed classes which were changed by bootstrap, including
-    * `pull-left` > `float-left`
-    * `hidden-*` > `d-none`, `d-lg-block`
-    * Breakpoint shift: Moved all classes
+    * `pull-left` > `float-left`
+    * `hidden-*` > `d-none`, `d-lg-block`
+    * Breakpoint shift: Moved all classes
 * Breakpoint shift: Moved media queries
     * Bootstrap 4 added a new breakpoint for 576px+
     * Bootstrap 4 breakpoint sizes have shifted (sm is now md, md is now lg, lg is now xl)
