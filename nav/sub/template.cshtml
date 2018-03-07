@@ -16,7 +16,7 @@
 				var classString = new HtmlString((cssClasses.Count == 0) ? "" : (" class=\"" + String.Join(" ", cssClasses.ToArray()) + "\""));
 				<li @classString>
 					@if (node.Enabled) {
-						<a target="@(node.Target)" href="@node.Url"><small class="visible-xs-inline visible-sm-inline glyphicon glyphicon-chevron-right" aria-hidden="true"></small> @node.Text</a>
+						<a target="@(node.Target)" href="@node.Url"><small class="visible-xs-inline visible-sm-inline" aria-hidden="true"><i class="fas fa-chevron-@(node.Breadcrumb && node.Children.Any() ? "down" : "right")"></i></small> @node.Text</a>
 					} else {
 						@node.Text
 					}

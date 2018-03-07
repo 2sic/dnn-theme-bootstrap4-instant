@@ -103,9 +103,9 @@
 						<span itemprop="addressCountry">Instant Country</span>
 					</span>
 				</li>
-                <li><span class="glyphicon glyphicon-phone"></span>&nbsp;<a href="tel:+41817506777">+41 81 750 67 77</a></li>
+                <li><i class="fas fa-phone"></i>&nbsp;<a href="tel:+41817506777">+41 81 750 67 77</a></li>
 				<li>
-					<span class="glyphicon glyphicon-envelope"></span>&nbsp;<span data-madr1="instant" data-madr2="example" data-madr3="com" data-linktext="instant@example.com"></span>
+					<i class="far fa-envelope"></i>&nbsp;<span data-madr1="instant" data-madr2="example" data-madr3="com" data-linktext="instant@example.com"></span>
 				</li>
             </ul>
             <div class="ly-footer-imprint">
