@@ -36,7 +36,7 @@ SOFTWARE.
     <component type="Skin">
       <skinFiles>
         <skinName>dnn-theme-bootstrap4-instant</skinName>
-        <basePath>Portals\_default\Skins\dnn-theme-bootstrap4-instant</basePath>
+        <basePath>Portals\_default\Skins\DNN Theme Bootstrap 4 Instant</basePath>
         <skinFile>
           <path>App_LocalResources</path>
           <name>default.ascx.de-DE.resx</name>
