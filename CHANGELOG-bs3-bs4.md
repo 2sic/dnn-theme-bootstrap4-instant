@@ -22,6 +22,5 @@
     * For variables that did not exist: Created in variables_2sic
     * Changed $brand-primary to theme-color("primary") globally
     * $gray is now $gray-100, there are more grayscales in bs4
-* Glyphicons are missing - options (TBD):
-    * Maybe license needed for Bootstrap 4 (or manual copy and paste from old bootstrap code)
-    * Switch to FontAwesome which is free (we would need to rename all icon classes from glyphicons-* to fa-*)
+* Removed Glyphicons and switched to FontAwesome
+    * renamed all icon classes from glyphicons-* to fa-*
