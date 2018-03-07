@@ -17,11 +17,11 @@
 * Fixed issue in package.json (comments are not allowed)
 * Removed separate typography.css from dist because we don't need this anymore
 * Main (desktop) menu: added classes nav-link (li>a) and nav-item (li)
-* Nav-sub: removed bootstrap class because it did not help anything
+* Nav-sub: removed bootstrap class because it had no effect
 * Variables: Bootstrap 4 has renamed and changed variables - took new variables file and moved existing variables (if existed) to new version
     * For variables that did not exist: Created in variables_2sic
-    * Changed $brand-primary to theme-color("primary")
-    * $gray is now $gray-100, there are more grayscales
+    * Changed $brand-primary to theme-color("primary") globally
+    * $gray is now $gray-100, there are more grayscales in bs4
 * Glyphicons are missing - options (TBD):
     * Maybe license needed for Bootstrap 4 (or manual copy and paste from old bootstrap code)
     * Switch to FontAwesome which is free (we would need to rename all icon classes from glyphicons-* to fa-*)
