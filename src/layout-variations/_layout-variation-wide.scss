@@ -1,0 +1,59 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	/*layout wide*/
+	body.va-layout-wide {
+		background-color: #ECEFF1;
+		margin-bottom:40px;
+		
+		.ly-header-pane {
+			margin-top: 0;
+			@media(min-width: 1450px){
+				margin-bottom: -405px;
+				min-height:485px + $grid-gutter-width;
+				
+			}
+			.ly-container-inner {
+				@media(min-width: 1450px){
+					margin-left: -100px;
+					margin-right: -100px;
+				}
+				@media(min-width: 1650px){
+					margin-left: -200px;
+					margin-right: -200px;
+				}
+			}
+			
+			/* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */
+			&:not(.ly-header-pane-empty) .dnnSortable {
+				min-height: 0!important;
+				height: 0;
+			}
+		}
+		&.tab-home {
+			.ly-header-pane {
+				@media(min-width: 1450px){
+					margin-bottom: -200px;
+				}
+			}
+			
+		}
+		
+		.ly-header-pane-empty {
+			.ly-container-inner {
+				background: theme-color("primary");
+				padding-bottom: 9%;
+				@media(min-width: 1450px){
+					padding-bottom: 20%;
+				}
+			}
+		}
+		#content .container-fluid.ly-content {
+			position: relative;
+			z-index: 11;
+		}
+	
+		.ly-fullwrapper .ly-push { display: none; }
+	}
+}

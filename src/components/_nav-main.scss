@@ -1,0 +1,82 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+
+    #nav-desktop {
+        margin: 0;
+        margin-top:5px;
+        float: right;
+        padding:0;
+        transition: margin .4s;
+    }
+
+	/* Reset for all Navigations */
+	.ly-nav { 
+		&, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+    }
+    
+    .navbar {
+    .ly-nav-main {
+        li {
+            a {
+                text-decoration: none;
+                color: $body-color;
+                border-radius: 5px;
+                font-family: $headings-font-family;
+                font-size: 18px;
+                margin: 0 0 0 5px;
+                padding: 10px $grid-gutter-width/2; 
+                border: 0px solid transparent;
+                transition: color .5s;
+                position:relative;
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: theme-color("primary");
+
+                    &:after {
+                        width: calc(100% - #{$grid-gutter-width});
+                    }
+                }
+
+                &:after {
+                    content: " ";
+                    height: 1px;
+                    width: 0;
+                    background: theme-color("primary");
+                    position: absolute;
+                    left: $grid-gutter-width/2;
+                    bottom: 0;
+
+                    transition: width .4s;
+                }
+            }
+            &.active > a {
+                background-color: transparent;
+                color: theme-color("primary");
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: theme-color("primary");
+                }
+
+                &:after {
+                    width: calc(100% - #{$grid-gutter-width});
+                    left: $grid-gutter-width/2;
+                }
+            }
+        }
+    }
+    }
+    .fixed-header {
+        #nav-desktop {
+            margin-top: -4px;
+        }
+    }
+}

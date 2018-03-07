@@ -1,0 +1,19 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all { 
+	/*layout default*/
+	body.va-layout-default {
+		.ly-header-pane {
+			@include media-breakpoint-up(xl) {
+				margin-top: $grid-gutter-width*2;
+			}
+		}
+		.ly-header-pane-empty {
+			background: theme-color("primary");
+			height: $grid-gutter-width*1.5;
+		}
+	
+		.ly-fullwrapper .ly-push { display: none; }
+	}
+}

@@ -1,0 +1,8 @@
+@media print {
+	a[href]:after {
+	    content:"" !important;
+	}
+	.ly-nav-mobile-trigger {
+		display: none;
+	}
+}

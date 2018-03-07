@@ -1,0 +1,15 @@
+@import "_variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_bootstrap-override";
+
+/* 2sic Bootstrap overrides */
+a.btn-primary.btn-primary {
+	&:link, &:visited, &:hover {
+		color: #fff;
+	}
+}
+a.btn.btn {
+	&:link, &:visited, &:hover {
+		text-decoration: none;
+	}
+}

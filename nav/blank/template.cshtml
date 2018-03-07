@@ -1,0 +1,29 @@
+@using DotNetNuke.Web.DDRMenu;
+@using System.Dynamic; 
+@inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic> 
+@{ var root = Model.Source.root; }
+
+@helper RenderNodes(IList<MenuNode> nodes) {
+	if (nodes.Count > 0) {
+		<ul class="@(nodes[0].Depth == 0 ? "ly-nav" : "")">
+			@foreach (var node in nodes) {
+				var cssClasses = new List<string>();
+				cssClasses.Add("nav-" + node.TabId);
+				if (node.First) { cssClasses.Add("first"); }
+				if (node.Last) { cssClasses.Add("last"); }
+				if (node.HasChildren()) { cssClasses.Add("has-child"); }
+				if (node.Breadcrumb) { cssClasses.Add("active"); } else { cssClasses.Add("inactive"); }
+				var classString = new HtmlString((cssClasses.Count == 0) ? "" : (" class=\"" + String.Join(" ", cssClasses.ToArray()) + "\""));
+				<li @classString>
+					@if (node.Enabled) {
+						<a target="@(node.Target)" href="@node.Url">@node.Text</a>
+					} else {
+						@node.Text
+					}
+					@RenderNodes(node.Children)
+				</li>
+			}
+		</ul>
+	}
+}
+@RenderNodes(root.Children)

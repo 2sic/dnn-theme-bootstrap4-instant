@@ -1,0 +1,78 @@
+@import "_variables";
+
+// Import fonts from google
+// 2016-12-05 2rm changed include to default.ascx (caused issues with ClientDependency)
+// @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
+
+@media all {
+
+	body, p, .Normal, li p {
+		font-size: $font-size-base;
+		line-height: $line-height-base;
+	}
+	p { margin-bottom: $font-size-base * 0.6875; }
+	h1, h2 { 
+		font-weight: $headings-font-weight;
+	}
+	h1 { 
+		text-transform: uppercase;
+		font-size: $h1-font-size/1.5;
+		margin-top: 22px;
+		margin-bottom: 11px;	
+		@include media-breakpoint-up(lg) {
+			font-size: $h1-font-size;
+		}
+	}
+    h2 { 
+		font-size: $h2-font-size/1.3;
+		@include media-breakpoint-up(lg) {
+			font-size: $h2-font-size;
+		}
+	}
+    h3 { 
+		font-size: $h3-font-size/1.2;
+		@include media-breakpoint-up(lg) {
+			font-size: $h3-font-size;
+		}
+	}
+	h3, h4, h5, h6 {
+		font-weight: 700;
+	}
+	ul, ol {
+		padding-left:$grid-gutter-width;
+		margin: 0;
+		margin-bottom: $grid-gutter-width;
+		line-height: 1.2;
+		p {
+			margin-bottom: 0;
+		}
+		li {
+			margin-bottom: 5px;
+		}
+		ul, ol {
+			margin: 0;
+			padding-left:$grid-gutter-width;
+			margin-bottom: 2px;
+		}
+	}
+	a, a:visited {
+		text-decoration: $tosic-link-decoration; color: $link-color;
+	}
+	a:hover { color:$link-hover-color; text-decoration: $link-hover-decoration; }
+	.co-link {
+		color: $link-color;
+		text-decoration: $tosic-link-decoration;
+		&:hover {
+			text-decoration: $link-hover-decoration;
+			color: $link-hover-color;
+		}
+	}
+	.co-p {
+	  margin: 0 0 ($line-height-computed / 2);
+	}
+
+	/* use this class for templates should have space to the bottom */
+	.ly-margin-bottom /* .DnnModule */{ 
+		margin-bottom: $line-height-computed;
+	}
+}

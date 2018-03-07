@@ -1,0 +1,20 @@
+{
+  "name": "2sic-standard-skin-template",
+  "version": "03.00.02",
+  "description": "The default skin template for 2sic websites",
+  "main": "(none)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "2sic internet solutions",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "sidr": "^2.2.1"
+  },
+  "ToSIC-global-dependencies": {
+    "gulp": "",
+    "gulp-sass": ""
+  }
+}

@@ -1,0 +1,102 @@
+/*
+    This file contains all CSS rules for the DNNCentric Contact Form
+    */
+
+/* General field styles*/
+.DnnModule-DNNCentric-MultilanguageForms input[type=text],
+.DnnModule-DNNCentric-MultilanguageForms input[type=file],
+.DnnModule-DNNCentric-MultilanguageForms textarea,
+.DnnModule-DNNCentric-MultilanguageForms select { font-size: 13px; color: #46535b !important; width: 100% !important; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] { width: 100% !important; max-width: 600px; }
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] > tbody > tr > td { padding-bottom: 10px; padding-right: 10px; }
+.DnnModule-DNNCentric-MultilanguageForms input[type='text'],
+.DnnModule-DNNCentric-MultilanguageForms input[type='file'],
+.DnnModule-DNNCentric-MultilanguageForms textarea { background: #E2E2E2; border: 0px solid; resize: none; padding: 5px; color: inherit!important; font: inherit!important; }
+.DnnModule-DNNCentric-MultilanguageForms textarea { display: block; }
+.DnnModule-DNNCentric-MultilanguageForms select { background: #E2E2E2; border: 0; padding: 5px; }
+
+.DnnModule-DNNCentric-MultilanguageForms input.EML_FieldError[type='text'],
+.DnnModule-DNNCentric-MultilanguageForms input.EML_FieldError[type='file'],
+.DnnModule-DNNCentric-MultilanguageForms .EML_FieldError { background: #ffbbba; }
+
+/* Checkbox / Radio Buttons */
+.DnnModule-DNNCentric-MultilanguageForms .CFC_NormalTextBox1, .DnnModule-DNNCentric-MultilanguageForms .EML_FieldError {
+	width: 100%!important; color: inherit!important; font: inherit!important; font-weight: normal;
+}
+.DnnModule-DNNCentric-MultilanguageForms .CFC_NormalTextBox1 td, .DnnModule-DNNCentric-MultilanguageForms .EML_FieldError td {
+	padding-bottom: 3px;
+}
+.DnnModule-DNNCentric-MultilanguageForms .CFC_NormalTextBox1 label, .DnnModule-DNNCentric-MultilanguageForms .EML_FieldError label {
+	font-weight: normal;
+	margin-left: 3px;
+	display: inline;
+}
+.DnnModule-DNNCentric-MultilanguageForms input[type="checkbox"], .DnnModule-DNNCentric-MultilanguageForms input[type="radio"] {
+	position:relative;
+	top:2px;
+}
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_rdl_RadiobuttonList'] input,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_chklst_CheckboxListVertical'] input { float: left; }
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_rdl_RadiobuttonList'] label,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_chklst_CheckboxListVertical'] label { display: block; line-height: 1.3em; margin-left: 19px; margin-bottom: 2px; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] > tbody > tr > td.DCC_EF_FieldCaptionStyle { padding: 4px 20px 0 0 !important; vertical-align:top; }
+td.DCC_EF_FieldCaptionStyle, .DCC_EF_FieldCaptionStyle label { color: inherit!important;font: inherit!important; font-weight: normal; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .CommandButton,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .btnSubmit { background: #3067b4;padding: 7px 14px;color: #ffffff; margin-top:5px; display:inline-block; border-radius:5px;text-decoration: none; }
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .CommandButton:hover,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .btnSubmit:hover { background: #3067b4; color: #ffffff;text-decoration: none; }
+
+.DnnModule-DNNCentric-MultilanguageForms .MyCategory { padding-top: 20px; }
+
+/* Error Messages */
+.DnnModule-DNNCentric-MultilanguageForms img[src="/DesktopModules/DNNCentric-MultilanguageForms/Images/Alert.png"] {
+    filter: grayscale(.4);
+    -webkit-filter: grayscale(.4);
+    -moz-filter: grayscale(.4);
+    -ms-filter: grayscale(.4);
+    -o-filter: grayscale(.4);
+}
+
+.tdErrorMsg, .EML_FieldError, .tableErrorMsg {
+    border:  none;
+    background: transparent;
+    color:  inherit;
+    padding: 0;
+	font: inherit!important;
+}
+.tdErrorMsg {
+	display: block;
+	color: #AF1616;
+	background-color: #ffbbba;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+.tdErrorMsg ul, .tdErrorMsg ul li {
+    padding:  0!important;
+    margin:  0!important;
+    list-style: none;
+    color: inherit!important;
+    font: inherit!important;
+    font-weight: normal;
+}
+
+.tableErrorMsg {float: left;margin:  25px 0 15px 0;}
+
+/* Required-* */
+.co-reqfield {
+	color: #AF1616;
+}
+
+
+/* Screen width: 767 and below */
+@media screen and (max-width: 767px) {
+
+    .DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] { max-width: 400px;table-layout: fixed; }
+    .DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] > tbody > tr > td { display: block;width: auto!important; }
+
+}

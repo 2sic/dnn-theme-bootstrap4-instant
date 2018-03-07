@@ -1,0 +1,55 @@
+@import "variables";
+@import "../variables-2sic";
+
+@media all {
+	
+	/*layout full*/
+	body.va-layout-full {
+		background-image: none;
+		header {
+			box-shadow: 0 0 20px;
+			
+		}
+		.fixed-header {
+			position:fixed;
+		}
+		.ly-header-pane {
+			background: transparent;
+			margin-top: 0;
+			width: 100%;
+			
+
+			&.container-fluid {
+				max-width: 100%;
+				.ly-container-inner {
+					max-width: 1920px;
+					margin: 0 auto;
+					overflow:hidden;
+				}
+			}
+		}		
+		#content .container-fluid.ly-content {
+			position: relative;
+		}
+
+		#content .container-fluid.ly-content {
+			background: transparent;
+		}
+
+		/* Sticky Footer */
+		height: 100%;
+		footer {
+			background-color: $tosic-footer-background;
+			height: 52px;
+		}
+		.ly-fullwrapper {
+			min-height: 100%;
+			margin: 0 auto -52px; /* the bottom margin is the negative value of the footer's height */
+		}
+		#Form {
+			height: 100%;
+		}
+
+		.ly-fullwrapper .ly-push { height: 52px; }
+	}
+}
