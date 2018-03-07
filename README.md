@@ -1,4 +1,4 @@
-<img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/assets/b3i-logo.png">
+(Todo 2dm) <img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/assets/b3i-logo.png">
 
 # DNN Skin/Theme Bootstrap4 Instant!
 A clean, prepared bootstrap4 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates. 
