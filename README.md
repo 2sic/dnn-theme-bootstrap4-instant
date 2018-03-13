@@ -1,4 +1,4 @@
-(Todo 2dm) <img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/assets/b4i-logo.png">
+<img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/assets/logo-1000.png">
 
 # DNN Skin/Theme Bootstrap4 Instant! for DNN 7, 8, 9
 
@@ -35,11 +35,11 @@ There are three ways to install the initial package
 2. By using `git clone` to create a copy of this repository in your _Skins_ folder
 3. By downloading the zip and manually copying it to the _Skins_ folder
 
-You can read more about this under (Todo 2dm) [Installation](https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/installation).
+You can read more about this under [Installation](https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/installation).
 
 ## Customize and Redesign everything within Minutes
 
-You can now quickly customize and redesign everything within minutes. Check out the instructions on how to (Todo 2dm) [Customize and Redesign](https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/customize-and-redesign) everything.
+You can now quickly customize and redesign everything within minutes. Check out the instructions on [Customize and Redesign](https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/customize-and-redesign) everything.
 
 ## Creating Awesome Designed Content
 
