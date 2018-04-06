@@ -60,11 +60,6 @@
 
 	<div id="content">
 		<div class="container-fluid ly-content">
-
-		<p class="ly-welcome-text">
-			This is the Bootstrap4 Instant Theme for DNN. Read the <a href="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki">Wiki</a> for further instructions.
-		</p>
-
 			<div class="ly-container-inner">
 				<div class="ly-contentpane-full">
 					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
@@ -93,7 +88,7 @@
         <div class="ly-container-inner clearfix">
             <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
-					<strong itemprop="name">Bootstrap 3 Instant</strong>
+					<strong itemprop="name">Bootstrap 4 Instant</strong>
 				</li>
 				<li>
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
