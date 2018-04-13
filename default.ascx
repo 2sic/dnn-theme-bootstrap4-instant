@@ -93,7 +93,7 @@
         <div class="ly-container-inner clearfix">
             <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
-					<strong itemprop="name">Bootstrap 3 Instant</strong>
+					<strong itemprop="name">Bootstrap 4 Instant</strong>
 				</li>
 				<li>
 					<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -109,7 +109,7 @@
 				</li>
             </ul>
             <div class="ly-footer-imprint">
-                <dnn:login id="DnnLogin" cssclass="ly-login d-none" runat="server" />
+                <dnn:login id="DnnLogin" cssclass="ly-login d-sm" runat="server" />
                 <a href="<%= LocalizeString("Imprint.Url") %>" title="Impressum"><%= LocalizeString("Imprint.Text") %></a>
             </div>
         </div>
