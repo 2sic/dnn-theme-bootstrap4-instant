@@ -8,10 +8,12 @@
   },
   "author": "2sic internet solutions",
   "license": "ISC",
+  "repository": "https://github.com/2sic/dnn-theme-bootstrap4-instant",
   "devDependencies": {},
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "sidr": "^2.2.1"
+    "bootstrap": "4.1.0",
+    "popper.js": "^1.14.3",
+    "sidr": "2.2.1"
   },
   "ToSIC-global-dependencies": {
     "gulp": "",
