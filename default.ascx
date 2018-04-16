@@ -60,6 +60,11 @@
 
 	<div id="content">
 		<div class="container-fluid ly-content">
+
+		<p class="ly-welcome-text">
+			This is the Bootstrap4 Instant Theme for DNN. Read the <a href="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki">Wiki</a> for further instructions.
+		</p>
+
 			<div class="ly-container-inner">
 				<div class="ly-contentpane-full">
 					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
@@ -104,7 +109,7 @@
 				</li>
             </ul>
             <div class="ly-footer-imprint">
-                <dnn:login id="DnnLogin" cssclass="ly-login d-none" runat="server" />
+                <dnn:login id="DnnLogin" cssclass="ly-login d-sm" runat="server" />
                 <a href="<%= LocalizeString("Imprint.Url") %>" title="Impressum"><%= LocalizeString("Imprint.Text") %></a>
             </div>
         </div>
