@@ -32,7 +32,7 @@
 					<div class="ly-header-mobile">
 						<div class="container-fluid clearfix">
 							<a href="#" class="ly-close"></a>
-							<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
+							<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
 								<img alt="Logo" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 							</a>
 						</div>
@@ -40,7 +40,7 @@
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
 				</nav>
 
-				<a class="ly-logo" href="/" title="Bootstrap 3 Instant (change this in the default.ascx)">			
+				<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
 					<img alt="Logo" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 				</a>
 
@@ -109,7 +109,7 @@
 				</li>
             </ul>
             <div class="ly-footer-imprint">
-                <dnn:login id="DnnLogin" cssclass="ly-login d-sm" runat="server" />
+                <dnn:login id="DnnLogin" cssclass="ly-login d-sm-none-down" runat="server" />
                 <a href="<%= LocalizeString("Imprint.Url") %>" title="Impressum"><%= LocalizeString("Imprint.Text") %></a>
             </div>
         </div>
