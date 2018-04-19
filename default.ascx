@@ -109,7 +109,11 @@
 				</li>
             </ul>
             <div class="ly-footer-imprint">
+<<<<<<< HEAD
                 <dnn:login id="DnnLogin" cssclass="ly-login d-sm-none-down" runat="server" />
+=======
+                <dnn:login id="DnnLogin" cssclass="ly-login d-sm" runat="server" />
+>>>>>>> a7cce43e3711906f6791bd5f00032e1d9fc59185
                 <a href="<%= LocalizeString("Imprint.Url") %>" title="Impressum"><%= LocalizeString("Imprint.Text") %></a>
             </div>
         </div>
