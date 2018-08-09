@@ -26,7 +26,7 @@ gulp.task('watch-javascript', function () {
 gulp.task('sass', function () {
   return gulp.src(sourceFilesWithoutBootstrap)
 	.pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(sourcemaps.write('.', { sourceRoot: '../src/' }))
     .pipe(gulp.dest('./dist/'));
 });
@@ -36,7 +36,7 @@ gulp.task('sass', function () {
 gulp.task('bootstrap', function () {
    return gulp.src(bootstrapFiles)
 	.pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
  	.pipe(sourcemaps.write('.', { sourceRoot: '../src/' }))
     .pipe(gulp.dest('./dist/'));
 });
