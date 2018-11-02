@@ -1,7 +1,7 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.0.0">
-  <friendlyName>DNN Skin/Theme Bootstrap4 Instant</friendlyName>
-  <description>A clean, prepared bootstrap4 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
+  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.0.3">
+  <friendlyName>Bootstrap 4 Instant</friendlyName>
+  <description>A clean, prepared bootstrap 4 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile />
   <owner>
     <name>2sic</name>
@@ -9,28 +9,7 @@
     <url>https://www.2sic.com/</url>
     <email>info@2sic.com</email>
   </owner>
-  <license>MIT License
-
-Copyright (c) 2016 2sic Internet Solutions GmbH
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-</license>
+  <license />
   <releaseNotes />
   <components>
     <component type="Skin">
@@ -1505,6 +1484,9 @@ SOFTWARE.
           <name>gulpfile.js</name>
         </skinFile>
         <skinFile>
+          <name>InvisibleContainer.zip</name>
+        </skinFile>
+        <skinFile>
           <name>koi.json</name>
         </skinFile>
         <skinFile>
@@ -1525,55 +1507,5 @@ SOFTWARE.
       </skinFiles>
     </component>
   </components>
-</package>
-<package name="Invisible Container" type="Container" version="1.2.0">
-  <friendlyName>Invisible Container</friendlyName>
-  <description>Invisible Container</description>
-  <iconFile />
-  <owner>
-    <name>2sic</name>
-    <organization>2sic internet solutions gmbh</organization>
-    <url>https://www.2sic.com</url>
-    <email>info@2sic.com</email>
-  </owner>
-  <license>MIT License
-
-Copyright (c) 2016 2sic Internet Solutions GmbH
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</license>
-  <releaseNotes />
-  <components>
-    <component type="ResourceFile">
-      <resourceFiles>
-        <basePath>Portals\_default\Containers\Invisible Container</basePath>
-        <resourceFile>
-          <name>InvisibleContainer.zip</name>
-        </resourceFile>
-      </resourceFiles>
-    </component>
-    <component type="Container">
-      <containerFiles>
-        <containerName>Invisible Container</containerName>
-        <basePath>Portals\_default\Containers\Invisible Container</basePath>
-      </containerFiles>
-    </component>
-  </components>
-</package>
-</packages>
+</package></packages>
 </dotnetnuke>
