@@ -46,9 +46,17 @@ gulp.task('javascript', function() {
  		.pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('bootstrap-js', function() {
-	return gulp.src('./bower_components\bootstrap-sass\assets\javascripts/bootstrap.min.js')
-		.pipe(gulp.dest('./dist/bootstrap/'));
+gulp.task('copy-libs', function() {
+	gulp.src('./node_modules/jquery/dist/jquery.min.js')
+		.pipe(gulp.dest('./dist/lib/'));
+	gulp.src('./node_modules/sidr/dist/jquery.sidr.min.js')
+		.pipe(gulp.dest('./dist/lib/'));
+	gulp.src('./node_modules/sidr/dist/stylesheets/jquery.sidr.dark.min.css')
+		.pipe(gulp.dest('./dist/lib/'));
+	gulp.src('./node_modules/bootstrap/dist/css/bootstrap.min.css')
+		.pipe(gulp.dest('./dist/lib/'));
+	return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+		.pipe(gulp.dest('./dist/lib/'));
 });
 
 gulp.task('default', ['sass', 'javascript', 'watch-sass', 'watch-bootstrap', 'watch-javascript']);
