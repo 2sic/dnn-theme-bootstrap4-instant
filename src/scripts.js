@@ -105,15 +105,18 @@ $(function() {
 	});
 	
 	// Sticky header
+	var navheight = $('header').height();
 	$(window).scroll(function(){
-		if ($(window).scrollTop() >= 1) {
+		if ($(window).scrollTop() >= navheight) {
 			$('header').addClass('fixed-header');
-			$('body').addClass('fixed');
-			
+			$('body').css('padding-top', navheight + 'px');
+			if ($(window).scrollTop() >= navheight + 1) {
+				$('header').addClass('fixed-top');
+			}
 		}
 		else {
-		   $('header').removeClass('fixed-header');
-			$('body').removeClass('fixed');
+		   $('header').removeClass('fixed-header fixed-top');
+		   $('body').css('padding-top', '0px');
 		}
 	});	
 });
