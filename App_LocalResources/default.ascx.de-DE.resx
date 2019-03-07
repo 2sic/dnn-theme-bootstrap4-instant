@@ -124,7 +124,13 @@
     <value>Impressum</value>
   </data>
   <data name="Imprint.Url" xml:space="preserve">
-    <value>/Impressum</value>
+    <value>/impressum</value>
+  </data>
+  <data name="Privacy.Text" xml:space="preserve">
+    <value>Datenschutz</value>
+  </data>
+  <data name="Privacy.Url" xml:space="preserve">
+    <value>/datenschutz</value>
   </data>
   <data name="SkipLink.MainContent" xml:space="preserve">
     <value>Zum Inhalt springen</value>
