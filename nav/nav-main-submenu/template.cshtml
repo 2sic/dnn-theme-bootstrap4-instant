@@ -1,0 +1,102 @@
+@using DotNetNuke.Web.DDRMenu;
+@using System.Dynamic;
+@inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic>
+
+@{ var root = Model.Source.root; }
+@helper RenderNodes(IList<MenuNode> nodes)
+{
+    if (nodes.Count > 0)
+    {
+    <ul class="navbar-nav flex-row ly-nav ly-nav-main">
+        @foreach (var node in nodes)
+        {
+            var classString = GetClasses(node);
+			
+            <li @classString>
+                @RenderItem(node)				
+                @if(node.Children.Count > 0) {
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						@RenderChildNodes(node.Children)
+					</div>						
+					}
+            </li>
+        }
+    </ul>
+    }
+}
+
+@helper RenderChildNodes(IList<MenuNode> nodes)
+{
+    if (nodes.Count > 0)
+    {    
+        foreach (var node in nodes)
+        {
+            var classString = GetClasses(node);		
+            @RenderChildItem(node)						
+        }   
+    }
+}
+@helper RenderItem(MenuNode node)
+{
+    if (node.Enabled)
+    {
+		if (node.Depth == 0) {
+			if (node.HasChildren())	{
+				<a class="nav-link dropdown-toggle" href="@node.Url" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@node.Text</a>}
+			else {
+				<a class="nav-link" href="@node.Url">@node.Text</a>}			
+		}
+		else {
+			<a href="@node.Url">@node.Text</a>}
+    }
+    else
+    {
+		<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">@node.Text</a>
+    }
+}
+
+@helper RenderChildItem(MenuNode node)
+{
+	if (node.Enabled)
+    {
+		<a class="dropdown-item" href="@node.Url">@node.Text</a>	
+	}
+	else 
+	{
+		<span class="dropdown-item-text">@node.Text</span>	
+	}
+}
+@functions{
+    public HtmlString GetClasses(MenuNode node)
+    {
+        return GetClasses(node, String.Empty);
+    }
+
+    public HtmlString GetClasses(MenuNode node, string additionalClasses)
+    {
+        List<string> cssClasses = GetClassList(node);
+        if (String.IsNullOrEmpty(additionalClasses)){
+        return new HtmlString((cssClasses.Count == 0) ?
+            String.Empty :
+            ("class=\"" + 
+                (String.Join(" ", cssClasses.ToArray()) + 
+                additionalClasses + "\"").TrimStart()));
+        }
+        else {
+            return new HtmlString("class=\"" + 
+                (String.Join(" ", cssClasses.ToArray()) + 
+                additionalClasses + "\"").TrimStart());
+        }
+    }
+	
+    public List<string> GetClassList(MenuNode node)
+    {
+        var classList = new List<string>();
+		classList.Add("nav-item");
+		if (node.HasChildren() && node.Depth == 0) { classList.Add("dropdown"); }
+		if (node.Selected) { classList.Add("active"); }
+        return classList;
+    }	
+}
+@RenderNodes(root.Children)
+
