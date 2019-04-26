@@ -5,22 +5,21 @@ var sourcemaps = require('gulp-sourcemaps');
 var bootstrapFiles = [
 	'./src/_variables.scss',
 	'./src/_bootstrap-override.scss',
-	'./src/bootstrap.scss',
-	'./src/wysiwyg.scss'];
+	'./src/bootstrap.scss'];
 var bootstrapFilesExclude = bootstrapFiles.map((v) => '!' + v);
 var sourceFilesWithoutBootstrap = ['./src/**/*.scss'];
 sourceFilesWithoutBootstrap = sourceFilesWithoutBootstrap.concat(bootstrapFilesExclude);
 
 gulp.task('watch-sass', function () {
-	gulp.watch(sourceFilesWithoutBootstrap, ['sass']);
+	gulp.watch(sourceFilesWithoutBootstrap, gulp.series('sass'));
 });
 
 gulp.task('watch-bootstrap', function () {
-	gulp.watch(bootstrapFiles, ['bootstrap', 'sass']);
+	gulp.watch(bootstrapFiles, gulp.series('bootstrap', 'sass'));
 });
 
 gulp.task('watch-javascript', function () {
-	gulp.watch(['./src/**.js'], ['javascript']);
+	gulp.watch(['./src/**.js'], gulp.series('javascript'));
 });
 
 gulp.task('sass', function () {
@@ -59,4 +58,4 @@ gulp.task('copy-libs', function() {
 		.pipe(gulp.dest('./dist/lib/'));
 });
 
-gulp.task('default', ['sass', 'javascript', 'watch-sass', 'watch-bootstrap', 'watch-javascript']);
+gulp.task('default', gulp.series('sass', 'javascript', 'watch-sass', 'watch-bootstrap', 'watch-javascript'));
