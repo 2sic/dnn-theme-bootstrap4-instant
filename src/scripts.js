@@ -50,6 +50,15 @@ $(function() {
     $('#nav-main-offcanvas li.active').each(function () {
         $(this).find('ul:first').slideDown();
         $(this).toggleClass('ly-active');
+	});
+	/* Mobile Navigation */
+    $('#nav-sub .ly-navopener').click(function () {
+        $(this).parent().parent().toggleClass('ly-active').find('ul:first').slideToggle();
+    });
+
+    $('#nav-sub li.active').each(function () {
+        $(this).find('ul:first').slideDown();
+        $(this).toggleClass('ly-active');
     });
 
 
@@ -119,6 +128,8 @@ $(function() {
 		   $('body').css('padding-top', '0px');
 		}
 	});	
+	
 });
+
 
 

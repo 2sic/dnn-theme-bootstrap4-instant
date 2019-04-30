@@ -27,12 +27,14 @@
                 color: $body-color;
                 border-radius: 5px;
                 font-family: $headings-font-family;
-                font-size: 18px;
+                font-size: 14px;
+                text-transform:uppercase;
                 margin: 0 0 0 5px;
                 padding: 10px $grid-gutter-width/2; 
                 border: 0px solid transparent;
                 transition: color .5s;
                 position:relative;
+                font-weight:600;
 
                 &:hover,
                 &:focus {
@@ -69,6 +71,13 @@
                 &:after {
                     width: calc(100% - #{$grid-gutter-width});
                     left: $grid-gutter-width/2;
+                }
+            }
+            &.last {
+                a {
+                    padding-right:0px;
+                    margin:0;
+                    background:red;
                 }
             }
         }

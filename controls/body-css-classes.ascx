@@ -24,6 +24,7 @@
 		CssClass += "portal-" + PortalSettings.Current.PortalId;
 		CssClass += " va-layout-default"; // va-layout-wide, va-layout-default, va-layout-box, va-layout-full
 		CssClass += " va-mainnav-right "; // va-mainnav-left, va-mainnav-right, va-mainnav-center
+
 		HtmlGenericControl body = (HtmlGenericControl)this.Page.FindControl("ctl00$body");
 		body.Attributes["class"] = CssClass;
 	}

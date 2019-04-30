@@ -16,18 +16,22 @@
 				var classString = new HtmlString((cssClasses.Count == 0) ? "" : (" class=\"" + String.Join(" ", cssClasses.ToArray()) + "\""));
 				<li @classString>
 					@if (node.Enabled) {
-						<a target="@(node.Target)" href="@node.Url"><small class="d-inline d-lg-none" aria-hidden="true"><i class="fas fa-chevron-@(node.Breadcrumb && node.Children.Any() ? "down" : "right")"></i></small> @node.Text</a>
+						<div class="ly-linkwrapper">
+                            <a @(node.Target == "_new" ? "target=\"_blank\"" : "") href="@node.Url">@node.Text</a>
+                            @if (node.HasChildren())
+                            {
+                                <div class="ly-navopener">
+                                    <div class="ly-navopener-icon"></div>
+                                </div>
+                            }
+                        </div>
 					} else {
 						@node.Text
 					}
-					@if(node.Breadcrumb)
-					{
-						@RenderNodes(node.Children);
-					}
+                    @RenderNodes(node.Children)
 				</li>
 			}
 		</ul>
 	}
 }
-
 @RenderNodes(root.Children)

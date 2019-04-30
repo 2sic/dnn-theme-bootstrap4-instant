@@ -5,12 +5,16 @@
 	/*layout wide*/
 	body.va-layout-wide {
 		background-color: #ECEFF1;
-		margin-bottom:40px;
-		
+		text:center;
+		.ly-fullwrapper {
+			max-width:1600px;
+			margin:0 auto;
+			
+		}
 		.ly-header-pane {
 			margin-top: 0;
 			@media(min-width: 1450px){
-				margin-bottom: -405px;
+				margin-bottom: -200px;
 				min-height:485px + $grid-gutter-width;
 				
 			}
@@ -43,9 +47,10 @@
 		.ly-header-pane-empty {
 			.ly-container-inner {
 				background: theme-color("primary");
-				padding-bottom: 9%;
+				background: linear-gradient(to bottom, rgba($primary,1) 0%,rgba(255,255,255,0) 100%);
 				@media(min-width: 1450px){
-					padding-bottom: 20%;
+					margin-bottom: -300px;
+					min-height:485px + $grid-gutter-width;
 				}
 			}
 		}

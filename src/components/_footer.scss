@@ -15,6 +15,7 @@
 			color:$tosic-footer-color;
 		}
 		color:$tosic-footer-color;
+		
 	}
 
     .ly-footer-address {
@@ -33,5 +34,4 @@
     @include media-breakpoint-down(sm)  {
         .ly-footer-imprint { float:none; clear:left; }
     }
-	
 }

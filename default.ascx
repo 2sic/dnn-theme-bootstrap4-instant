@@ -14,10 +14,13 @@
 <%@ Register TagPrefix="tosic" TagName="SxcQuickEdit" src="controls/2sxc-quickedit.ascx" %>
 <tosic:SxcQuickEdit runat="server" />
 
-<%-- Include Google Font --%>
+<%-- Include Google Font 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+--%>
+
 
 <a class="sr-only sr-only-focusable" href="#content"><%= LocalizeString("SkipLink.MainContent") %></a>
+
 <div class="ly-fullwrapper">
 	<header>
 		<div class="container-fluid clearfix">
@@ -60,11 +63,9 @@
 
 	<div id="content">
 		<div class="container-fluid ly-content">
-
 		<p class="ly-welcome-text">
 			This is the Bootstrap4 Instant Theme for DNN. Read the <a href="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki">Wiki</a> for further instructions.
 		</p>
-
 			<div class="ly-container-inner">
 				<div class="ly-contentpane-full">
 					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
@@ -74,7 +75,7 @@
 						<div id="RightPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
 					</div>
 					<div class="col-xs-12 col-lg-3 order-lg-1 ly-col-leftpane">
-						<div class="d-none d-sm-block">
+						<div id="nav-sub" class="d-none d-sm-block">
 							<dnn:MENU MenuStyle="nav/sub" NodeSelector="+0,0,2" runat="server" />
 						</div>
 						<div class="d-block d-sm-none">
@@ -91,7 +92,7 @@
 <footer>
     <div class="container-fluid">
         <div class="ly-container-inner clearfix">
-            <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
+              <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
 					<strong itemprop="name">Bootstrap 4 Instant</strong>
 				</li>
@@ -115,6 +116,7 @@
         </div>
     </div>
 </footer>
+
 
 <!-- include files in head -->
 <dnn:DnnCssInclude runat="server" FilePath="dist/full-package.css" Priority="100" PathNameAlias="SkinPath" />

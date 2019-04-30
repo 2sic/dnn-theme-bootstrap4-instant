@@ -8,7 +8,7 @@
 
 	body, p, .Normal, li p {
 		font-size: $font-size-base;
-		line-height: $line-height-base;
+		line-height: 1.6em;
 	}
 	p { margin-bottom: $font-size-base * 0.6875; }
 	h1, h2 { 
