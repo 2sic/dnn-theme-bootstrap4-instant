@@ -6,7 +6,7 @@ module.exports  = env => {
   return {
     entry: ['./src/scss/full-package.scss', './src/ts/main.ts'],
     output: {
-      path: path.resolve(__dirname, ((env && env.staging) ? 'dist-webpack/staging' : 'dist-webpack/live')),
+      path: path.resolve(__dirname, ((env && env.staging) ? 'dist/staging' : 'dist/live')),
       filename: 'main.min.js',
     },
     mode: (env && env.staging) ? 'development' : 'production',

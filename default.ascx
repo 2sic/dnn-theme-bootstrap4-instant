@@ -118,12 +118,12 @@
 </footer>
 
 
-<!-- include files in head -->
-<dnn:DnnCssInclude runat="server" FilePath="dist-webpack/live/main.min.css" Priority="100" PathNameAlias="SkinPath" />
+<!-- include files -->
+<dnn:DnnCssInclude runat="server" FilePath="dist/live/main.min.css" Priority="100" PathNameAlias="SkinPath" />
 
-<dnn:DnnJsInclude runat="server" FilePath="dist-webpack/live/lib/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude runat="server" FilePath="dist-webpack/live/lib/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude runat="server" FilePath="dist-webpack/live/main.min.js" ForceProvider="DnnFormBottomProvider" Priority="130" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude runat="server" FilePath="dist/lib/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude runat="server" FilePath="dist/lib/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude runat="server" FilePath="dist/live/main.min.js" ForceProvider="DnnFormBottomProvider" Priority="130" PathNameAlias="SkinPath" />
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
