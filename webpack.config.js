@@ -9,7 +9,7 @@ module.exports  = env => {
       path: path.resolve(__dirname, ((env && env.staging) ? 'dist-webpack/staging' : 'dist-webpack/live')),
       filename: 'main.min.js',
     },
-    mode: 'none',
+    mode: (env && env.staging) ? 'development' : 'production',
     devtool: 'source-map',
     watch: true,
     resolve: {
