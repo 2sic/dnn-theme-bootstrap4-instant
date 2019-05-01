@@ -4,7 +4,8 @@
   "description": "The default skin template for 2sic websites",
   "main": "(none)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-live": "webpack",
+    "watch-dev": "webpack --env.staging"
   },
   "author": "2sic internet solutions",
   "license": "ISC",
@@ -16,9 +17,11 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "terser-webpack-plugin": "^1.2.3",
-    "webpack-glob-entry": "^2.1.1"
+    "ts-loader": "^5.4.4",
+    "typescript": "^3.4.5"
   },
   "dependencies": {
+    "@types/jquery": "^3.3.29",
     "bootstrap": "^4.1.3",
     "popper.js": "^1.14.3",
     "sidr": "2.2.1"

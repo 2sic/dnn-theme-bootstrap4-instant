@@ -3,10 +3,10 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
 var bootstrapFiles = [
-	'./src/_variables.scss',
-	'./src/_bootstrap-override.scss',
-	'./src/bootstrap.scss',
-	'./src/wysiwyg.scss'];
+	'./src/scss/_variables.scss',
+	'./src/scss/_bootstrap-override.scss',
+	'./src/scss/bootstrap.scss',
+	'./src/scss/wysiwyg.scss'];
 var bootstrapFilesExclude = bootstrapFiles.map((v) => '!' + v);
 var sourceFilesWithoutBootstrap = ['./src/**/*.scss'];
 sourceFilesWithoutBootstrap = sourceFilesWithoutBootstrap.concat(bootstrapFilesExclude);
@@ -27,7 +27,7 @@ gulp.task('sass', function () {
   return gulp.src(sourceFilesWithoutBootstrap)
 	.pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-	.pipe(sourcemaps.write('.', { sourceRoot: '../src/' }))
+	.pipe(sourcemaps.write('.', { sourceRoot: '../src/scss/' }))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -37,7 +37,7 @@ gulp.task('bootstrap', function () {
    return gulp.src(bootstrapFiles)
 	.pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
- 	.pipe(sourcemaps.write('.', { sourceRoot: '../src/' }))
+ 	.pipe(sourcemaps.write('.', { sourceRoot: '../src/scss/' }))
     .pipe(gulp.dest('./dist/'));
 });
 

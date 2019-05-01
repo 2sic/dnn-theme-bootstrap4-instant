@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "lib": ["es6", "dom"],
+        "target": "es3",
+        "allowJs": true
+    }
+}

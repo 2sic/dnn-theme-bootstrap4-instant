@@ -1,26 +1,22 @@
 const path = require('path');
-const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const entry = require('webpack-glob-entry')
 
 module.exports  = env => {
   return {
-    entry: entry('./src/full-package.scss'),
+    entry: ['./src/scss/full-package.scss', './src/ts/main.ts'],
     output: {
       path: path.resolve(__dirname, ((env && env.staging) ? 'dist-webpack/staging' : 'dist-webpack/live')),
-      filename: 'app-bundle.min.js',
+      filename: 'main.min.js',
     },
+    mode: 'none',
     devtool: 'source-map',
     watch: true,
     resolve: {
-      extensions: ['.scss']
+      extensions: ['.ts', '.tsx', '.js', '.scss']
     },
     optimization: {
       minimizer: [
-        new TerserJSPlugin({
-          sourceMap: true,
-        }), 
         new OptimizeCSSAssetsPlugin({ 
           cssProcessorOptions: { 
             map: { 
@@ -33,8 +29,8 @@ module.exports  = env => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'style.min.css',
-      }),
+        filename: 'main.min.css',
+      })
     ],
     module: {
       rules: [
@@ -55,6 +51,12 @@ module.exports  = env => {
             }
           ],
         },
+        {
+          test: /\.ts$/,
+          use: {
+            loader: 'ts-loader'
+          }
+        }
       ],
     },
   }
