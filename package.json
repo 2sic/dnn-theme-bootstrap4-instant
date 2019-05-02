@@ -5,18 +5,24 @@
   "main": "(none)",
   "scripts": {
     "watch-live": "webpack",
-    "watch-dev": "webpack --env.staging"
+    "watch-dev": "webpack --env.staging",
+    "copy-lib": "npm run copy-lib-jquery & npm run copy-lib-bootstrap-js & npm run copy-lib-bootstrap-css & npm run copy-lib-sidr-js & npm run copy-lib-sidr-css",
+    "copy-lib-jquery": "cpx \"node_modules\\jquery\\dist\\jquery.min.js\" \"dist\\lib\"",
+    "copy-lib-bootstrap-js": "cpx \"node_modules\\bootstrap\\dist\\js\\bootstrap.min.js\" \"dist\\lib\"",
+    "copy-lib-bootstrap-css": "cpx \"node_modules\\bootstrap\\dist\\css\\bootstrap.min.css\" \"dist\\lib\"",
+    "copy-lib-sidr-js": "cpx \"node_modules\\sidr\\dist\\jquery.sidr.min.js\" \"dist\\lib\"",
+    "copy-lib-sidr-css": "cpx \"node_modules\\sidr\\dist\\stylesheets\\jquery.sidr.dark.min.css\" \"dist\\lib\""
   },
   "author": "2sic internet solutions",
   "license": "ISC",
   "repository": "https://github.com/2sic/dnn-theme-bootstrap4-instant",
   "devDependencies": {
+    "cpx": "^1.5.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
-    "terser-webpack-plugin": "^1.2.3",
     "ts-loader": "^5.4.4",
     "typescript": "^3.4.5"
   },

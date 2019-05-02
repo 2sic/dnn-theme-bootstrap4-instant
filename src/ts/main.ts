@@ -1,11 +1,4 @@
-/* apply css3 pie for support: box-shadow, gradients and rounded corners in IE < 10 */
 $(function () {
-	// if (window.PIE) {
-	// 	$('#dnn_Slogan').each(function () {
-	// 		PIE.attach(this);
-	// 	});
-	// }
-
 	/* Open all PDF links in a new window */
 	$('a[href$=".pdf"]').attr('target', '_blank');
 
