@@ -124,7 +124,13 @@
     <value>Imprint</value>
   </data>
   <data name="Imprint.Url" xml:space="preserve">
-    <value>/Imprint</value>
+    <value>/imprint</value>
+  </data>
+  <data name="Privacy.Text" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="Privacy.Url" xml:space="preserve">
+    <value>/privacy</value>
   </data>
   <data name="SkipLink.MainContent" xml:space="preserve">
     <value>Skip to main content</value>
