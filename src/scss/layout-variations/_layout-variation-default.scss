@@ -1,26 +1,28 @@
-@import "variables";
-@import "../variables-2sic";
-
-@media all { 
+@media all {
 	/*layout default*/
 	body.va-layout-default {
 		.container-fluid {
 			@include media-breakpoint-up(xl) {
-				max-width:1400px;
+				max-width: 1400px;
 			}
-			
+
 		}
+
 		.ly-header-pane {
 			@include media-breakpoint-up(xl) {
 				margin-top: $grid-gutter-width*2;
 			}
 		}
+
 		.ly-header-pane-empty {
 			background: theme-color("primary");
-			height:0;
+			height: 0;
 		}
-	
-		.ly-fullwrapper .ly-push { display: none; }
+
+		.ly-fullwrapper .ly-push {
+			display: none;
+		}
+
 		footer {
 			margin-bottom: $grid-gutter-width;
 		}

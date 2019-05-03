@@ -1,7 +1,8 @@
 @media print {
 	a[href]:after {
-	    content:"" !important;
+		content: "" !important;
 	}
+
 	.ly-nav-mobile-trigger {
 		display: block;
 	}

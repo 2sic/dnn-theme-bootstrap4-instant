@@ -1,7 +1,4 @@
-@import "variables";
-@import "../variables-2sic";
 @media all {
-    /*#region Mobile Navigation */
     #nav-mobile {
         display: none;
     }
@@ -24,7 +21,6 @@
         }
     }
     .ly-close {
-        width: 50px;
         height: 30px;
         width: 30px;
         margin-top: 8px;
@@ -34,8 +30,6 @@
         display: inline-block;
         &:before,
         &:after {
-            width: 30px;
-            height: 10px;
             transform: rotate(-45deg);
             content: "";
             position: absolute;
@@ -90,7 +84,6 @@
     .ly-disablescroll .sidr {
         box-shadow: 15px 0 50px rgba(0, 0, 0, .55);
     }
-    /*#endregion*/
     .ly-header-mobile {
         background: #FFF;
         padding: 10px 0;
@@ -268,7 +261,6 @@
         }
         
     }
-    /*#endregion*/
     /*Burger Icon*/
     .fixed-header #nav-icon {
         @include media-breakpoint-up(md) {
@@ -295,7 +287,6 @@
         opacity: 1;
         left: 0;
     }
-    #nav-icon {}
     #nav-icon span:nth-child(1) {
         top: 0px;
     }

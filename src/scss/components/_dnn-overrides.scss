@@ -1,8 +1,4 @@
-@import "variables";
-@import "../variables-2sic";
-
 @media all {
-
 	/*DNN Overrides and default styles (do not change) */	
 	/* box-sizing Fixes for DNN components, 3dr party plugins, modules */
 	#ControlBar_ControlPanel * { box-sizing:content-box; }
@@ -32,5 +28,4 @@
 	#ControlBar_ControlPanel #ServiceImg {
 		display:none;
 	}
-	
 }

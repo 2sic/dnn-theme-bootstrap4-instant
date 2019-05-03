@@ -1,37 +1,48 @@
 @media all {
-    /*#region Footer */
-    footer {
+	footer {
 		&, p, .Normal, li p {
 			font-size: 14px;
 		}
-		.container-fluid { 
-			background:$tosic-footer-background;
-			position:relative;
-			padding-top:$grid-gutter-width/2;
+
+		.container-fluid {
+			background: $tosic-footer-background;
+			position: relative;
+			padding-top: $grid-gutter-width/2;
 			padding-bottom: $grid-gutter-width/2;
 		}
-		a, a:visited, a:hover, a:link {
+
+		a,
+		a:visited,
+		a:hover,
+		a:link {
 			text-decoration: none;
-			color:$tosic-footer-color;
+			color: $tosic-footer-color;
 		}
+
 		color:$tosic-footer-color;
-		
 	}
 
-    .ly-footer-address {
-        
-        float:left;
-        list-style-type:none;
-        margin:0;
+	.ly-footer-address {
+		float: left;
+		list-style-type: none;
+		margin: 0;
 		padding: 0;
 
-        li { float:left; margin-right:10px; }
-		
-    }
-    .ly-footer-imprint {
-        float:right;
-    }
-    @include media-breakpoint-down(sm)  {
-        .ly-footer-imprint { float:none; clear:left; }
-    }
+		li {
+			float: left;
+			margin-right: 10px;
+		}
+
+	}
+
+	.ly-footer-imprint {
+		float: right;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.ly-footer-imprint {
+			float: none;
+			clear: left;
+		}
+	}
 }
