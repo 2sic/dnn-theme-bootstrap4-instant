@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports  = env => {
   return {
@@ -12,6 +13,7 @@ module.exports  = env => {
     mode: (env && env.staging) ? 'development' : 'production',
     devtool: 'source-map',
     watch: true,
+    stats: 'none',
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.scss']
     },
@@ -30,7 +32,8 @@ module.exports  = env => {
     plugins: [
       new MiniCssExtractPlugin({
         filename: 'main.min.css',
-      })
+      }),
+      new FriendlyErrorsWebpackPlugin(),
     ],
     module: {
       rules: [
