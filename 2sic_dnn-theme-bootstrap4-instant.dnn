@@ -1,5 +1,5 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.2.0">
+  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.2.1">
   <friendlyName>Bootstrap 4 Instant</friendlyName>
   <description>A clean, prepared bootstrap 4 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile />
@@ -77,19 +77,19 @@ SOFTWARE.</license>
           <name>jquery.sidr.min.js</name>
         </skinFile>
         <skinFile>
-          <path>dist\live</path>
+          <path>dist</path>
           <name>main.min.css</name>
         </skinFile>
         <skinFile>
-          <path>dist\live</path>
+          <path>dist</path>
           <name>main.min.css.map</name>
         </skinFile>
         <skinFile>
-          <path>dist\live</path>
+          <path>dist</path>
           <name>main.min.js</name>
         </skinFile>
         <skinFile>
-          <path>dist\live</path>
+          <path>dist</path>
           <name>main.min.js.map</name>
         </skinFile>
         <skinFile>
@@ -265,7 +265,10 @@ SOFTWARE.</license>
           <name>tsconfig.json</name>
         </skinFile>
         <skinFile>
-          <name>webpack.config.js</name>
+          <name>webpack.dev.js</name>
+        </skinFile>
+        <skinFile>
+          <name>webpack.prod.js</name>
         </skinFile>
       </skinFiles>
     </component>
