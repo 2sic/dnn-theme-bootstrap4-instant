@@ -25,21 +25,21 @@ This theme is a layout/skin for the CMS [DNN](https://github.com/dnnsoftware/Dnn
 1. An automatic svg/png integration for responsive logos
 1. Layout footer implementing SEO microformats
 1. NPM for all dependencies
-1. Gulp to process the sass into the resulting CSS
+1. Webpack to process the sass/typescript into the resulting CSS/Javascript
 
 ## Theme Installation
 
 There are three ways to install the initial package
 
-1. By downloading the _package_ and installing it through the web UI of DNN
-2. By using `git clone` to create a copy of this repository in your _Skins_ folder
-3. By downloading the zip and manually copying it to the _Skins_ folder
+1. [By downloading the _package_ and installing it through the web UI of DNN](https://azing.org/dnn-community/r/jRA6BIxn)
+2. [By using `git clone` to create a copy of this repository in your _Skins_ folder](https://azing.org/dnn-community/r/dV0_C3yY)
+3. [By downloading the zip and manually copying it to the _Skins_ folder](https://azing.org/dnn-community/r/0DIROnG-)
 
-You can read more about this under [Installation](https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/installation).
+You can read more about this [here](https://azing.org/dnn-community/r/xmvM_gD7).
 
 ## Customize and Redesign everything within Minutes
 
-You can now quickly customize and redesign everything within minutes. Check out the instructions on [Customize and Redesign](https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/customize-and-redesign) everything.
+You can now quickly customize and redesign everything within minutes. Check out the instructions [here](https://azing.org/2sxc/r/TIvm7V0H).
 
 ## Creating Awesome Designed Content
 
