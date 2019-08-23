@@ -5,14 +5,14 @@
 
 @helper RenderNodes(IList<MenuNode> nodes) {
 	if (nodes.Count > 0) {
-		<ul class="@(nodes[0].Depth == 0 ? "ly-nav ly-nav-sub" : "")">
+		<ul class="@(nodes[0].Depth == 0 ? "ly-nav ly-nav-sub" : "ly-nav-child")">
 			@foreach (var node in nodes) {
 				var cssClasses = new List<string>();
 				cssClasses.Add("nav-" + node.TabId);
 				if (node.First) { cssClasses.Add("first"); }
 				if (node.Last) { cssClasses.Add("last"); }
 				if (node.HasChildren()) { cssClasses.Add("has-child"); }
-				if (node.Breadcrumb) { cssClasses.Add("active"); } else { cssClasses.Add("inactive"); }
+				if (node.Breadcrumb) { cssClasses.Add("active"); cssClasses.Add("ly-active"); } else { cssClasses.Add("inactive"); }
 				var classString = new HtmlString((cssClasses.Count == 0) ? "" : (" class=\"" + String.Join(" ", cssClasses.ToArray()) + "\""));
 				<li @classString>
 					@if (node.Enabled) {

@@ -147,6 +147,12 @@
             >.ly-linkwrapper>a:hover {
                 color: rgba(255, 255, 255, .5);
             }
+
+            &.active {
+                > .ly-nav-child {
+                    display: block;
+                }
+            }
             /* mobilenavigation level 2 */
             >ul {
                 background-color: rgba(0, 0, 0, 0.4);
@@ -167,6 +173,13 @@
                     >.ly-linkwrapper>a:hover {
                         color: rgba(255, 255, 255, .5);
                     }
+
+                    &.active {
+                        > .ly-nav-child {
+                            display: block;
+                        }
+                    }
+
                     /* mobilenavigation level 3 */
                     >ul {
                         display: none;
@@ -186,6 +199,13 @@
                             >.ly-linkwrapper>a:hover {
                                 color: rgba(255, 255, 255, .5);
                             }
+
+                            &.active {
+                                > .ly-nav-child {
+                                    display: block;
+                                }
+                            }
+
                             /* mobilenavigation level 3 */
                             >ul {
                                 padding-bottom: $grid-gutter-width / 2;
@@ -203,6 +223,13 @@
                                     >.ly-linkwrapper>a:hover {
                                         color: rgba(255, 255, 255, .5);
                                     }
+
+                                    &.active {
+                                        > .ly-nav-child {
+                                            display: block;
+                                        }
+                                    }
+
                                     /* mobilenavigation level 4+ */
                                     ul {
                                         li {
@@ -215,6 +242,12 @@
                                             &.active .ly-linkwrapper a,
                                             .ly-linkwrapper a:hover {
                                                 color: rgba(255, 255, 255, .5);
+                                            }
+
+                                            &.active {
+                                                > .ly-nav-child {
+                                                    display: block;
+                                                }
                                             }
                                         }
                                     }

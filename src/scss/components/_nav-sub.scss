@@ -35,6 +35,12 @@
                 color: rgba($dark, 1);
             }
 
+            &.active {
+                > .ly-nav-child {
+                    display: block;
+                }
+            }
+
             /* mobilenavigation level 2 */
             >ul {
                 background-color: rgba($primary, 0.1);
@@ -61,6 +67,12 @@
                         color: rgba($dark, 1);
                     }
 
+                    &.active {
+                        > .ly-nav-child {
+                            display: block;
+                        }
+                    }
+
                     /* mobilenavigation level 3 */
                     >ul {
                         display: none;
@@ -84,6 +96,12 @@
                                 color: rgba($dark, 1);
                             }
 
+                            &.active {
+                                > .ly-nav-child {
+                                    display: block;
+                                }
+                            }
+
                             /* mobilenavigation level 3 */
                             >ul {
                                 padding-bottom: $grid-gutter-width / 2;
@@ -103,6 +121,12 @@
                                         color: rgba(255, 255, 255, .5);
                                     }
 
+                                    &.active {
+                                        > .ly-nav-child {
+                                            display: block;
+                                        }
+                                    }
+
                                     /* mobilenavigation level 4+ */
                                     ul {
                                         li {
@@ -116,6 +140,12 @@
                                             &.active .ly-linkwrapper a,
                                             .ly-linkwrapper a:hover {
                                                 color: rgba(255, 255, 255, .5);
+                                            }
+
+                                            &.active {
+                                                > .ly-nav-child {
+                                                    display: block;
+                                                }
                                             }
                                         }
                                     }
