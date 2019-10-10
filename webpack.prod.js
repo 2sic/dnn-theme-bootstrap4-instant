@@ -21,13 +21,13 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new OptimizeCSSAssetsPlugin({ 
-        cssProcessorOptions: { 
-          map: { 
-            inline: false, 
-            annotation: true, 
-          } 
-        } 
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorOptions: {
+          map: {
+            inline: false,
+            annotation: true,
+          }
+        }
       })
     ],
   },
@@ -39,14 +39,20 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader'
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')
+              ]
+            }
           }, {
             loader: 'sass-loader'
           }
@@ -62,11 +68,11 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/,
         use: [{
-            loader: 'file-loader',
-            options: {
-                name: '[name].[ext]',
-                outputPath: 'images/'
-            }
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
         }]
       }
     ],

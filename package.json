@@ -17,6 +17,7 @@
   "license": "ISC",
   "repository": "https://github.com/2sic/dnn-theme-bootstrap4-instant",
   "devDependencies": {
+    "autoprefixer": "^9.6.4",
     "cpx": "^1.5.0",
     "css-loader": "^2.1.1",
     "file-loader": "^4.2.0",
@@ -24,6 +25,7 @@
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "ts-loader": "^5.4.4",
     "typescript": "^3.4.5",
