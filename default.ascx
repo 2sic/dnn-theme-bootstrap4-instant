@@ -141,10 +141,6 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 <script runat="server">
-	protected override void OnPreRender(EventArgs e)
-	{
-		base.OnPreRender(e);
-	}
 	
 	protected override void OnLoad(EventArgs e)
 	{
