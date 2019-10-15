@@ -146,6 +146,12 @@
 	{
 		base.OnLoad(e);
 		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no' />");
+
+		// Set various FavIcon and Icon headers according to best practices
+		// The next line is disabled by default, because it requires RazorBlade to be installed.
+		// How to install RazorBlade: https://azing.org/dnn-community/r/zbh8JC5T
+		// How to create best-practice FavIcons: https://azing.org/dnn-community/r/UhgWJbxh
+		// Connect.Razor.Blade.HtmlPage.AddIconSet(PortalSettings.Current.ActiveTab.SkinPath + "favicon.png");
 	}
 	
 	protected void AttachExternalCSS(string CSSPath) { AttachCustomHeader("<link type='text/css' rel='stylesheet' href='" + CSSPath + "' />"); }
