@@ -8,6 +8,18 @@
 <%@ Register TagPrefix="tosic" TagName="BodyCssClasses" src="controls/body-css-classes.ascx" %>
 <tosic:BodyCssClasses runat="server" />
 
+<%-- 
+	Set various FavIcon and Icon headers according to best practices
+	The next lines of code are disabled by default, because they require RazorBlade to be installed.
+	How to install RazorBlade: https://azing.org/dnn-community/r/zbh8JC5T (after that you can uncommend the next two lines)
+	How to create best-practice FavIcons: https://azing.org/dnn-community/r/UhgWJbxh
+--%>
+<%--
+<%@ Register TagPrefix="dnn" TagName="FavIcon" src="controls/favicon.ascx" %>
+<dnn:FavIcon runat="server" />
+--%>
+
+
 <%--
   more infos on 2sxc quick-edit: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
 --%>
