@@ -149,9 +149,9 @@
 
 		// Set various FavIcon and Icon headers according to best practices
 		// The next line is disabled by default, because it requires RazorBlade to be installed.
-		// How to install RazorBlade: https://azing.org/dnn-community/r/zbh8JC5T
+		// How to install RazorBlade 3: https://azing.org/dnn-community/r/zbh8JC5T
 		// How to create best-practice FavIcons: https://azing.org/dnn-community/r/UhgWJbxh
-		// Connect.Razor.Blade.HtmlPage.AddIconSet(SkinPath + "favicon.png");
+		// ToSic.Razor.Blade.HtmlPage.AddIconSet(SkinPath + "favicon.png");
 	}
 	
 	protected void AttachExternalCSS(string CSSPath) { AttachCustomHeader("<link type='text/css' rel='stylesheet' href='" + CSSPath + "' />"); }
