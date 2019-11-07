@@ -10,6 +10,7 @@ module.exports = {
     filename: 'main.min.js',
   },
   mode: 'development',
+  devtool: 'source-map',
   watch: true,
   stats: {
     all: false,
@@ -32,16 +33,23 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+                sourceMap: true
+            }
           }, {
             loader: 'postcss-loader',
             options: {
+              sourceMap: true,
               plugins: [
                 require('autoprefixer')
               ]
             }
           }, {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+                sourceMap: true
+            }
           }
         ],
       },
