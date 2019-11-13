@@ -13,3 +13,8 @@ a.btn.btn {
 		text-decoration: none;
 	}
 }
+
+/* Override width of DNNEmptyPane for 2sxc Quick-Edit control (DNN9) */
+body:not(.dnnEditState) .DNNEmptyPane {
+	width: auto;
+}
