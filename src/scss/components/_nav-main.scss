@@ -1,83 +1,58 @@
 @media all {
     #nav-desktop {
         margin: 0;
-        margin-top: 5px;
-        float: right;
         padding: 0;
         transition: margin .4s;
     }
-
     /* Reset for all Navigations */
     .ly-nav {
-
         &, ul, li {
             margin: 0;
             padding: 0;
         }
     }
-
     .navbar {
         .ly-nav-main {
             li {
                 a {
-                    text-decoration: none;
                     color: $body-color;
-                    border-radius: 5px;
-                    font-family: $headings-font-family;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    margin: 0 0 0 5px;
-                    padding: 10px $grid-gutter-width/2;
+                    padding: 10px 0;
+                    margin-left: 20px;
                     border: 0px solid transparent;
                     transition: color .5s;
                     position: relative;
-                    font-weight: 600;
-
                     &:hover,
                     &:focus {
                         background-color: transparent;
-                        color: theme-color("primary");
-
+                        color: $primary;
                         &:after {
-                            width: calc(100% - #{$grid-gutter-width});
+                            width:100%;
                         }
                     }
-
                     &:after {
                         content: " ";
                         height: 1px;
                         width: 0;
-                        background: theme-color("primary");
+                        background: $primary;
                         position: absolute;
-                        left: $grid-gutter-width/2;
+                        left: 0;
                         bottom: 0;
-
                         transition: width .4s;
                     }
                 }
-
                 &.active>a {
                     background-color: transparent;
-                    color: theme-color("primary");
-
+                    color: $primary;
                     &:hover,
                     &:focus {
                         background-color: transparent;
-                        color: theme-color("primary");
+                        color: $primary;
                     }
-
                     &:after {
-                        width: calc(100% - #{$grid-gutter-width});
-                        left: $grid-gutter-width/2;
+                        width: 100%;
                     }
                 }
             }
-        }
-    }
-
-    .fixed-header {
-        #nav-desktop {
-            margin-top: -4px;
         }
     }
 }

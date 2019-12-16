@@ -23,39 +23,36 @@
 
 <div class="ly-fullwrapper">
 	<header>
-		<div class="container-fluid clearfix">
-			<div class="ly-container-inner">
-				<div class="ly-overlay"></div>	
-				<div id="nav-icon" class="ly-nav-mobile-trigger float-left" title="Menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<nav id="nav-mobile">
-					<div class="ly-header-mobile">
-						<div class="container-fluid clearfix">
-							<a href="#" class="ly-close"></a>
-							<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
-								<img alt="Logo" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
-							</a>
-						</div>
-					</div>
-					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
-				</nav>
-
-				<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
-					<img alt="Logo" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
-				</a>
-
-				<nav id="nav-desktop" class="navbar d-none d-lg-block">
-					<dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
-				</nav>
-
+		<div class="container-fluid d-flex">
+			<div class="ly-overlay"></div>	
+			<div id="nav-icon" class="ly-nav-mobile-trigger float-left" title="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
+			<nav id="nav-mobile">
+				<div class="ly-header-mobile">
+					<div class="container-fluid">
+						<a href="#" class="ly-close"></a>
+						<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
+							<img alt="Logo" class="img-fluid" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+						</a>
+					</div>
+				</div>
+				<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
+			</nav>
+
+			<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
+				<img alt="Logo" class="img-fluid" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+			</a>
+
+			<nav id="nav-desktop" class="navbar d-none d-lg-block">
+				<dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
+			</nav>
 		</div>
 	</header>
 
-	<div class="container-fluid ly-header-pane <%= (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
+	<div class="container-fluid px-0 ly-header-pane <%= (HeaderPane.Attributes["class"] ?? "").Contains("DNNEmptyPane") ? "ly-header-pane-empty" : "" %>">
 		<div class="ly-container-inner">
 			<div id="HeaderPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
 		</div>
@@ -63,9 +60,6 @@
 
 	<div id="content">
 		<div class="container-fluid ly-content">
-		<p class="ly-welcome-text">
-			This is the Bootstrap4 Instant Theme for DNN. Read the <a href="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki">Wiki</a> for further instructions.
-		</p>
 			<div class="ly-container-inner">
 				<div class="ly-contentpane-full">
 					<div id="ContentPane" runat="server" containertype="G" containername="Invisible Container" containersrc="default.ascx"></div>
@@ -90,8 +84,7 @@
 	<div class="ly-push"></div>
 </div>
 <footer>
-    <div class="container-fluid">
-        <div class="ly-container-inner clearfix">
+    <div class="container-fluid d-flex justify-content-md-between flex-column flex-md-row">
               <ul class="ly-footer-address clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
 				<li>
 					<strong itemprop="name">Bootstrap 4 Instant</strong>
@@ -110,11 +103,10 @@
 				</li>
             </ul>
             <div class="ly-footer-imprint">
-                <dnn:login id="DnnLogin" cssclass="ly-login d-sm-none-down" runat="server" />
+                <dnn:login id="DnnLogin" cssclass="ly-login d-none d-lg-inline-flex" runat="server" />
                 <a href="<%= LocalizeString("Imprint.Url") %>" title="<%= LocalizeString("Imprint.Text") %>"><%= LocalizeString("Imprint.Text") %></a> | 
 				<a href="<%= LocalizeString("Privacy.Url") %>" title="<%= LocalizeString("Privacy.Text") %>"><%= LocalizeString("Privacy.Text") %></a>
             </div>
-        </div>
     </div>
 </footer>
 
@@ -122,8 +114,8 @@
 <!-- include files -->
 <dnn:DnnCssInclude runat="server" FilePath="dist/main.min.css" Priority="100" PathNameAlias="SkinPath" />
 
-<dnn:DnnJsInclude runat="server" FilePath="dist/lib/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude runat="server" FilePath="dist/lib/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude runat="server" FilePath="dist/lib/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath"  />
+<dnn:DnnJsInclude runat="server" FilePath="dist/lib/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude runat="server" FilePath="dist/main.min.js" ForceProvider="DnnFormBottomProvider" Priority="130" PathNameAlias="SkinPath" />
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -133,7 +125,7 @@
 	protected override void OnLoad(EventArgs e)
 	{
 		base.OnLoad(e);
-		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no' />");
+		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no' />");
 
 		// Set various FavIcon and Icon headers according to best practices
 		// The next line is disabled by default, because it requires RazorBlade to be installed.

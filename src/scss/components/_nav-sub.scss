@@ -1,200 +1,119 @@
 @media all {
     .ly-nav-sub {
-        margin: ($grid-gutter-width / 2) 0;
-        font-size: $font-size-base;
-
-        &, ul {
-            margin-left: 0;
-            padding: 0;
-            list-style-type: none;
+      margin: ($grid-gutter-width / 2) 0;
+      &,ul {
+        margin-left: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      /* default styling for all li */
+      li {
+        border-bottom: 1px solid $white;
+        a {
+          transition: color 0.4s;
+          color: $body-color;
+          display: block;
+          padding: 10px 40px 10px 0;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
         }
-
-        /* mobilenavigation default styles for all levels */
+        &.active >.ly-linkwrapper a {
+          color: $primary;
+        }
+        .ly-linkwrapper {
+          position: relative;
+          .ly-navopener {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba($primary, 0);
+            position: absolute;
+            right: 0;
+            width: 40px;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+  
+            .ly-navopener-icon {
+              font-size: 20px;
+              font-family: sans-serif;
+  
+              &:before {
+                content: "+";
+              }
+            }
+          }
+        }
+        &.ly-active >.ly-linkwrapper {
+          .ly-navopener {
+            .ly-navopener-icon {
+              &:before {
+                content: "–";
+              }
+            }
+          }
+        }
         li {
-            list-style-type: none;
-
-            a {
-                text-decoration: none;
-                transition: color .4s;
-                color: darken($primary, 25%);
+          a {
+            font-size: 0.85em;
+          }
+          &.active {
+            .ly-nav-child {
+              display: block;
             }
+          }
+          &.last {
+            border-bottom: none;
+          }
         }
-
-        /* mobilenavigation level 1 */
-        >li {
-
-            >.ly-linkwrapper>a {
-                text-decoration: none;
-                display: block;
-                padding: 10px 40px 10px 0;
-                font-size: 16px;
+        
+      }
+      /* level 1 */
+      >li {
+        &.active {
+          >a {
+            color: $primary !important;
+          }
+          >.ly-nav-child {
+            display: block;
+          }
+        }
+        /* mobilenavigation level 2 */
+        >ul {
+          background-color: rgba($primary, 0.1);
+          display: none;
+          >li {
+            >.ly-linkwrapper >a {
+              padding-left: 15px;
             }
-
-            &.active>.ly-linkwrapper>a,
-            >.ly-linkwrapper>a:hover {
-                color: rgba($dark, 1);
-            }
-
-            &.active {
-                > .ly-nav-child {
-                    display: block;
-                }
-            }
-
-            /* mobilenavigation level 2 */
+            /* mobilenavigation level 3 */
             >ul {
-                background-color: rgba($primary, 0.1);
-                display: none;
-                margin-left: -15px;
-
-                >li {
-                    border-bottom: 1px solid theme-color("primary");
-
-                    &.last {
-                        border-bottom: none;
-                    }
-
-                    margin:0;
-
-                    >.ly-linkwrapper>a {
-                        display: block;
-                        padding: 10px 15px;
-                        line-height: 1.3em;
-                    }
-
-                    &.active>.ly-linkwrapper>a,
-                    >.ly-linkwrapper>a:hover {
-                        color: rgba($dark, 1);
-                    }
-
-                    &.active {
-                        > .ly-nav-child {
-                            display: block;
-                        }
-                    }
-
-                    /* mobilenavigation level 3 */
-                    >ul {
-                        display: none;
-                        background: rgba($primary, .1);
-
-                        >li {
-                            border-bottom: 1px solid rgba($primary, 0.2);
-
-                            &.last {
-                                border-bottom: none;
-                            }
-
-                            >.ly-linkwrapper>a {
-                                display: block;
-                                padding: 10px 10px 10px 30px;
-                                font-size: 0.85em;
-                            }
-
-                            &.active>.ly-linkwrapper>a,
-                            >.ly-linkwrapper>a:hover {
-                                color: rgba($dark, 1);
-                            }
-
-                            &.active {
-                                > .ly-nav-child {
-                                    display: block;
-                                }
-                            }
-
-                            /* mobilenavigation level 3 */
-                            >ul {
-                                padding-bottom: $grid-gutter-width / 2;
-                                padding-top: $grid-gutter-width / 2;
-                                display: none;
-                                background: rgba($primary, .1);
-
-                                >li {
-                                    >.ly-linkwrapper>a {
-                                        display: block;
-                                        padding: 8px 10px 8px 40px;
-                                        font-size: 0.85em;
-                                    }
-
-                                    &.active>.ly-linkwrapper>a,
-                                    >.ly-linkwrapper>a:hover {
-                                        color: rgba(255, 255, 255, .5);
-                                    }
-
-                                    &.active {
-                                        > .ly-nav-child {
-                                            display: block;
-                                        }
-                                    }
-
-                                    /* mobilenavigation level 4+ */
-                                    ul {
-                                        li {
-                                            .ly-linkwrapper a {
-                                                color: #fff;
-                                                display: block;
-                                                padding: 4px 10px 4px 60px;
-                                                font-size: 0.85em;
-                                            }
-
-                                            &.active .ly-linkwrapper a,
-                                            .ly-linkwrapper a:hover {
-                                                color: rgba(255, 255, 255, .5);
-                                            }
-
-                                            &.active {
-                                                > .ly-nav-child {
-                                                    display: block;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+              display: none;
+              background: rgba($primary, 0.1);
+              >li {
+                >.ly-linkwrapper >a {
+                  padding-left: 30px;
                 }
+                /* mobilenavigation level 4 */
+                >ul {
+                  display: none;
+                  background: rgba($primary, 0.1);
+  
+                  >li {
+                    >.ly-linkwrapper >a {
+                      padding-left: 40px;
+                    }
+                    /* mobilenavigation level 5+ */
+                  }
+                }
+              }
             }
+          }
         }
-
-        li {
-            .ly-linkwrapper {
-                position: relative;
-
-                .ly-navopener {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: rgba($primary, 0.0);
-                    position: absolute;
-                    right: 0;
-                    width: 40px;
-                    text-align: center;
-                    top: 0;
-                    bottom: 0;
-                    cursor: pointer;
-
-                    .ly-navopener-icon {
-                        font-size: 20px;
-                        font-family: sans-serif;
-
-                        &:before {
-                            content: "+"
-                        }
-                    }
-                }
-            }
-
-            &.ly-active>.ly-linkwrapper {
-                .ly-navopener {
-                    .ly-navopener-icon {
-                        &:before {
-                            content: "–"
-                        }
-                    }
-                }
-            }
-        }
-
+      }
     }
-}
+  }
+  

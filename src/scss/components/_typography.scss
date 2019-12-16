@@ -13,7 +13,6 @@
 		font-weight: $headings-font-weight;
 	}
 	h1 { 
-		text-transform: uppercase;
 		font-size: $h1-font-size/1.5;
 		margin-top: 22px;
 		margin-bottom: 11px;	
@@ -56,21 +55,5 @@
 	a, a:visited {
 		text-decoration: $tosic-link-decoration; color: $link-color;
 	}
-	a:hover { color:$link-hover-color; text-decoration: $link-hover-decoration; }
-	.co-link {
-		color: $link-color;
-		text-decoration: $tosic-link-decoration;
-		&:hover {
-			text-decoration: $link-hover-decoration;
-			color: $link-hover-color;
-		}
-	}
-	.co-p {
-	  margin: 0 0 ($line-height-computed / 2);
-	}
-
-	/* use this class for templates should have space to the bottom */
-	.ly-margin-bottom /* .DnnModule */{ 
-		margin-bottom: $line-height-computed;
-	}
+	a:hover, a:focus { color:$link-hover-color; text-decoration: $link-hover-decoration; }
 }

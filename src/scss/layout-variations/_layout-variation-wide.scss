@@ -1,68 +1,57 @@
 @media all {
-	/*layout wide*/
-	body.va-layout-wide {
-		background-color: #ECEFF1;
+  /*layout wide*/
+  body.va-layout-wide {
+    background-color: #eceff1;
+    .ly-fullwrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .ly-header-pane {
+      margin-top: 0;
+      @media (min-width: 1450px) {
+        margin-bottom: -200px;
+        min-height: 485px + $grid-gutter-width;
+      }
+      .ly-container-inner {
+        @include media-breakpoint-up(xl) {
+          margin-left: -200px;
+          margin-right: -200px;
+        }
+      }
+      /* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */
+      &:not(.ly-header-pane-empty) .dnnSortable {
+        min-height: 0 !important;
+        height: 0;
+      }
+    }
 
-		.ly-fullwrapper {
-			max-width: 1600px;
-			margin: 0 auto;
-		}
+    &.tab-home {
+      .ly-header-pane {
+        @include media-breakpoint-up(xl) {
+          margin-bottom: -200px;
+        }
+      }
+    }
 
-		.ly-header-pane {
-			margin-top: 0;
+    .ly-header-pane-empty {
+      .ly-container-inner {
+        background: $primary;
+        background: linear-gradient(to bottom, rgba($primary, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        @include media-breakpoint-up(xl) {
+          margin-bottom: -300px;
+          min-height: 485px + $grid-gutter-width;
+        }
+      }
+    }
 
-			@media(min-width: 1450px) {
-				margin-bottom: -200px;
-				min-height: 485px + $grid-gutter-width;
+    .container-fluid.ly-content {
+      position: relative;
+      z-index: 11;
+    }
 
-			}
-
-			.ly-container-inner {
-				@media(min-width: 1450px) {
-					margin-left: -100px;
-					margin-right: -100px;
-				}
-
-				@media(min-width: 1650px) {
-					margin-left: -200px;
-					margin-right: -200px;
-				}
-			}
-
-			/* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */
-			&:not(.ly-header-pane-empty) .dnnSortable {
-				min-height: 0 !important;
-				height: 0;
-			}
-		}
-
-		&.tab-home {
-			.ly-header-pane {
-				@media(min-width: 1450px) {
-					margin-bottom: -200px;
-				}
-			}
-		}
-
-		.ly-header-pane-empty {
-			.ly-container-inner {
-				background: theme-color("primary");
-				background: linear-gradient(to bottom, rgba($primary, 1) 0%, rgba(255, 255, 255, 0) 100%);
-
-				@media(min-width: 1450px) {
-					margin-bottom: -300px;
-					min-height: 485px + $grid-gutter-width;
-				}
-			}
-		}
-
-		#content .container-fluid.ly-content {
-			position: relative;
-			z-index: 11;
-		}
-
-		.ly-fullwrapper .ly-push {
-			display: none;
-		}
-	}
+    .ly-fullwrapper .ly-push {
+      display: none;
+    }
+  }
 }

@@ -1,115 +1,23 @@
 @media all {
-    /* Logo left */
+    /* Logo left */ /* Logo right */
     body.va-mainnav-left {
-        .ly-logo {
-            float: right;
-        }
-
-        #nav-desktop {
-            float: left;
-        }
+      .container-fluid {
+        flex-direction: row-reverse;
+      }
     }
-
-    /* Logo right */
-    body.va-mainnav-right {
-        .ly-logo {
-            float: right;
-
-            @include media-breakpoint-up(lg) {
-                float: left;
-            }
-        }
-
-        #nav-desktop {
-            float: right;
-        }
-    }
-
     /* header centered */
     body.va-mainnav-center {
-        &.fixed {
-            height: 65px;
-
-            @include media-breakpoint-up(md) {
-                height: 120px;
-                margin-top: 120px;
-            }
+      header {
+        .container-fluid {
+          flex-direction: column !important;
+          justify-content: center !important;
+          padding-bottom:0px;
+          .ly-logo {margin-bottom:10px;}
         }
-
-        header {
-            height: 65px;
-
-            @include media-breakpoint-up(md) {
-                height: auto;
-            }
-
-            &.fixed-header {
-                height: 120px;
-
-                .container-fluid {
-                    max-height: 200px;
-                }
-            }
-
-            .container-fluid {
-                height: auto !important;
-
-                @include media-breakpoint-up(lg) {
-                    padding-bottom: 0px !important;
-                }
-
-                padding-bottom:10px !important;
-            }
-        }
-
-        .ly-logo {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .ly-header-mobile .ly-logo {
-            margin: 0;
-            text-align: right;
-            display: inline;
-            float: right;
-        }
-
-        #nav-desktop {
-            float: none;
-            margin: $grid-gutter-width/2 0 0 0;
-            text-align: center;
-
-            .navbar-nav {
-                float: none;
-
-                li {
-                    display: inline-block;
-                    float: none;
-
-                    a {
-                        &:after {
-                            content: " ";
-                            bottom: -2px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .co-navigation {
-            text-align: center;
-        }
+      }
+      .co-navigation {
+        text-align: center;
+      }
     }
-
-    /* special combine rules */
-    body.va-layout-default.va-header-center {
-        header {
-            background: $gray-100;
-        }
-
-        .ly-header-pane {
-            margin-top: 0;
-        }
-    }
-}
+  }
+  
