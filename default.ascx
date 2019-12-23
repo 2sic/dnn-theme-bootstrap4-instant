@@ -118,7 +118,7 @@
 <dnn:DnnJsInclude runat="server" FilePath="dist/lib/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude runat="server" FilePath="dist/main.min.js" ForceProvider="DnnFormBottomProvider" Priority="130" PathNameAlias="SkinPath" />
 
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script defer async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 <script runat="server">
 	
