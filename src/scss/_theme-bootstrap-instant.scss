@@ -19,10 +19,10 @@ $body-color: 		#555555;
 
 
 // 2.3 Custom Bootstrap Instant 4 Theme variables - used in the variations of the themes */
-$tosic-header-background: #fff; /* TODO: use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+$tosic-header-background: #fff;
 $tosic-footer-background: $primary;
 $tosic-footer-color: 			#fff;
-$tosic-link-decoration:		none; // Custom 2sic variable
+$tosic-link-decoration:		none;
 
 
 
@@ -98,8 +98,7 @@ $font-family-base: $font-family-sans-serif;
 // ----------------------------------------------------------------------------------------------------
 // 9. Final adjustments / tweaking / DNN workarounds
 
-// 9.1 2sic Bootstrap overrides
-// TODO: why are they here
+// 9.1 Fix links which look like buttons so the text doesn't get underlined
 a.btn-primary.btn-primary {
 	&:link, &:visited, &:hover {
 		color: #fff;

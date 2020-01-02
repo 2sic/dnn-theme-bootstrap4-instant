@@ -1,9 +1,10 @@
-// Initialize Theme styles and all default Bootstrap Variables
-@import "_theme";
+// 1. Initialize Theme styles and all default Bootstrap Variables
+@import "_theme-bootstrap-instant";
 
+// ----------------------------------------------------------------------------------------------------
+// 2. Generate all standard Bootstrap CSS
 // The following bootstrap parts are used by the default setup
 // so we are including them here
-// @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
@@ -27,7 +28,7 @@
 @import "../../node_modules/bootstrap/scss/print";
 
 // The following bootstrap parts are not used by the default setup
-// But in case you need them, we didn't remove them but commented them out
+// But in case you need them, just uncommented the lines
 //@import "../../node_modules/bootstrap/scss/jumbotron";
 //@import "../../node_modules/bootstrap/scss/progress";
 //@import "../../node_modules/bootstrap/scss/toasts";
@@ -42,22 +43,31 @@
 //@import "../../node_modules/bootstrap/scss/input-group";
 //@import "../../node_modules/bootstrap/scss/custom-forms";
 
+// ----------------------------------------------------------------------------------------------------
+// 3. Generate CSS for this theme / skin
+@import "components/typography";      // Fonts / typography
+@import "components/base-layout";     // Layout styles, body, html, fluid, etc.
+@import "components/header";          // Header styles
+@import "components/footer";          // Footer styles
+@import "components/dnn-overrides";
 
-
-@import "components/typography";
-@import "components/base-layout";
-@import "components/header";
-@import "components/nav-main";
+// Navigations / Menus
+@import "components/nav-desktop-main";
+@import "components/nav-desktop-sub";         
 @import "components/nav-mobile";
-@import "components/nav-sub";
-@import "components/nav-inpage";
+@import "components/nav-mobile-to-top";
+
+// More components
 @import "components/fancybox";
+
+// Other medias
+@import "components/print";
+
+// ----------------------------------------------------------------------------------------------------
+// 4. Layout Variations
 @import "layout-variations/layout-variation-default";
 @import "layout-variations/layout-variation-box";
 @import "layout-variations/layout-variation-wide";
 @import "layout-variations/layout-variation-full";
 @import "layout-variations/layout-header-variations";
-@import "components/footer";
-@import "components/dnn-overrides";
-@import "components/print";
 

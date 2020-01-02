@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* TODO: use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
 a.btn-primary.btn-primary:link, a.btn-primary.btn-primary:visited, a.btn-primary.btn-primary:hover {
   color: #fff; }
 
@@ -5805,6 +5804,68 @@ a.text-dark:hover, a.text-dark:focus {
           height: 37px; } }
 
 @media all {
+  footer,
+  footer p,
+  footer .Normal,
+  footer li p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2em; }
+  footer .container-fluid {
+    background: blue;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    footer .container-fluid a {
+      color: #fff; }
+      footer .container-fluid a:hover, footer .container-fluid a:focus {
+        text-decoration: underline; }
+    footer .container-fluid .ly-footer-address {
+      list-style-type: none;
+      margin: 0;
+      margin-bottom: 8px;
+      padding: 0; } }
+    @media all and (min-width: 768px) {
+      footer .container-fluid .ly-footer-address {
+        margin-bottom: 0; } }
+    @media all and (min-width: 1200px) {
+      footer .container-fluid .ly-footer-address li {
+        display: inline-flex;
+        margin-right: 6px; } }
+
+@media all {
+  /*DNN Overrides and default styles (do not change) */
+  /* box-sizing Fixes for DNN components, 3dr party plugins, modules */
+  #ControlBar_ControlPanel * {
+    box-sizing: content-box; }
+  #ControlBar_ControlPanel .mark {
+    background-color: transparent;
+    padding: 0; }
+  #ControlNav > li > a {
+    text-decoration: none; }
+  .actionMenu * {
+    box-sizing: content-box; }
+  .dnnCheckbox .mark {
+    padding: 0;
+    background: none; }
+  .ui-dialog {
+    color: black;
+    font-family: Arial, sans-serif; }
+  ul, ol {
+    margin: 0; }
+  ul {
+    list-style-type: disc; }
+    ul ul {
+      list-style-type: circle; }
+  a.ly-login, a.ly-login:link, a.ly-login:visited {
+    color: blue;
+    font-size: 10px; }
+  a.ly-login:hover {
+    color: #fff; }
+  #ControlBar_ControlPanel #ServiceImg {
+    display: none; } }
+
+@media all {
   #nav-desktop {
     margin: 0;
     padding: 0;
@@ -5842,6 +5903,81 @@ a.text-dark:hover, a.text-dark:focus {
       color: blue; }
     .navbar .ly-nav-main li.active > a:after {
       width: 100%; } }
+
+@media all {
+  .ly-nav-sub {
+    margin: 15px 0;
+    /* default styling for all li */
+    /* level 1 */ }
+    .ly-nav-sub, .ly-nav-sub ul {
+      margin-left: 0;
+      padding: 0;
+      list-style-type: none; }
+    .ly-nav-sub li {
+      border-bottom: 1px solid #fff; }
+      .ly-nav-sub li a {
+        transition: color 0.4s;
+        color: #555555;
+        display: block;
+        padding: 10px 40px 10px 0; }
+        .ly-nav-sub li a:hover, .ly-nav-sub li a:focus {
+          color: blue; }
+      .ly-nav-sub li.active > .ly-linkwrapper a {
+        color: blue; }
+      .ly-nav-sub li .ly-linkwrapper {
+        position: relative; }
+        .ly-nav-sub li .ly-linkwrapper .ly-navopener {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(0, 0, 255, 0);
+          position: absolute;
+          right: 0;
+          width: 40px;
+          text-align: center;
+          top: 0;
+          bottom: 0;
+          cursor: pointer; }
+          .ly-nav-sub li .ly-linkwrapper .ly-navopener .ly-navopener-icon {
+            font-size: 20px;
+            font-family: sans-serif; }
+            .ly-nav-sub li .ly-linkwrapper .ly-navopener .ly-navopener-icon:before {
+              content: "+"; }
+      .ly-nav-sub li.ly-active > .ly-linkwrapper .ly-navopener .ly-navopener-icon:before {
+        content: "–"; }
+      .ly-nav-sub li li a {
+        font-size: 0.85em; }
+      .ly-nav-sub li li.active .ly-nav-child {
+        display: block; }
+      .ly-nav-sub li li.last {
+        border-bottom: none; }
+    .ly-nav-sub > li {
+      /* mobilenavigation level 2 */ }
+      .ly-nav-sub > li.active > a {
+        color: blue !important; }
+      .ly-nav-sub > li.active > .ly-nav-child {
+        display: block; }
+      .ly-nav-sub > li > ul {
+        background-color: rgba(0, 0, 255, 0.1);
+        display: none; }
+        .ly-nav-sub > li > ul > li {
+          /* mobilenavigation level 3 */ }
+          .ly-nav-sub > li > ul > li > .ly-linkwrapper > a {
+            padding-left: 15px; }
+          .ly-nav-sub > li > ul > li > ul {
+            display: none;
+            background: rgba(0, 0, 255, 0.1); }
+            .ly-nav-sub > li > ul > li > ul > li {
+              /* mobilenavigation level 4 */ }
+              .ly-nav-sub > li > ul > li > ul > li > .ly-linkwrapper > a {
+                padding-left: 30px; }
+              .ly-nav-sub > li > ul > li > ul > li > ul {
+                display: none;
+                background: rgba(0, 0, 255, 0.1); }
+                .ly-nav-sub > li > ul > li > ul > li > ul > li {
+                  /* mobilenavigation level 5+ */ }
+                  .ly-nav-sub > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
+                    padding-left: 40px; } }
 
 @media all {
   #nav-mobile {
@@ -6067,81 +6203,6 @@ a.text-dark:hover, a.text-dark:focus {
     z-index: 2000; } }
 
 @media all {
-  .ly-nav-sub {
-    margin: 15px 0;
-    /* default styling for all li */
-    /* level 1 */ }
-    .ly-nav-sub, .ly-nav-sub ul {
-      margin-left: 0;
-      padding: 0;
-      list-style-type: none; }
-    .ly-nav-sub li {
-      border-bottom: 1px solid #fff; }
-      .ly-nav-sub li a {
-        transition: color 0.4s;
-        color: #555555;
-        display: block;
-        padding: 10px 40px 10px 0; }
-        .ly-nav-sub li a:hover, .ly-nav-sub li a:focus {
-          color: blue; }
-      .ly-nav-sub li.active > .ly-linkwrapper a {
-        color: blue; }
-      .ly-nav-sub li .ly-linkwrapper {
-        position: relative; }
-        .ly-nav-sub li .ly-linkwrapper .ly-navopener {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: rgba(0, 0, 255, 0);
-          position: absolute;
-          right: 0;
-          width: 40px;
-          text-align: center;
-          top: 0;
-          bottom: 0;
-          cursor: pointer; }
-          .ly-nav-sub li .ly-linkwrapper .ly-navopener .ly-navopener-icon {
-            font-size: 20px;
-            font-family: sans-serif; }
-            .ly-nav-sub li .ly-linkwrapper .ly-navopener .ly-navopener-icon:before {
-              content: "+"; }
-      .ly-nav-sub li.ly-active > .ly-linkwrapper .ly-navopener .ly-navopener-icon:before {
-        content: "–"; }
-      .ly-nav-sub li li a {
-        font-size: 0.85em; }
-      .ly-nav-sub li li.active .ly-nav-child {
-        display: block; }
-      .ly-nav-sub li li.last {
-        border-bottom: none; }
-    .ly-nav-sub > li {
-      /* mobilenavigation level 2 */ }
-      .ly-nav-sub > li.active > a {
-        color: blue !important; }
-      .ly-nav-sub > li.active > .ly-nav-child {
-        display: block; }
-      .ly-nav-sub > li > ul {
-        background-color: rgba(0, 0, 255, 0.1);
-        display: none; }
-        .ly-nav-sub > li > ul > li {
-          /* mobilenavigation level 3 */ }
-          .ly-nav-sub > li > ul > li > .ly-linkwrapper > a {
-            padding-left: 15px; }
-          .ly-nav-sub > li > ul > li > ul {
-            display: none;
-            background: rgba(0, 0, 255, 0.1); }
-            .ly-nav-sub > li > ul > li > ul > li {
-              /* mobilenavigation level 4 */ }
-              .ly-nav-sub > li > ul > li > ul > li > .ly-linkwrapper > a {
-                padding-left: 30px; }
-              .ly-nav-sub > li > ul > li > ul > li > ul {
-                display: none;
-                background: rgba(0, 0, 255, 0.1); }
-                .ly-nav-sub > li > ul > li > ul > li > ul > li {
-                  /* mobilenavigation level 5+ */ }
-                  .ly-nav-sub > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
-                    padding-left: 40px; } }
-
-@media all {
   a.ly-top {
     position: fixed;
     bottom: 20px;
@@ -6186,6 +6247,12 @@ a.text-dark:hover, a.text-dark:focus {
   /* 2sic Fancybox overrides */
   .fancybox-skin.fancybox-skin {
     border-radius: 0; } }
+
+@media print {
+  a[href]:after {
+    content: "" !important; }
+  .ly-nav-mobile-trigger {
+    display: block; } }
 
 @media all and (min-width: 1200px) {
   body.va-layout-default .container-fluid {
@@ -6313,74 +6380,6 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: 10px; }
   body.va-mainnav-center .co-navigation {
     text-align: center; } }
-
-@media all {
-  footer,
-  footer p,
-  footer .Normal,
-  footer li p {
-    font-size: 14px;
-    color: #fff;
-    line-height: 1.2em; }
-  footer .container-fluid {
-    background: blue;
-    position: relative;
-    padding-top: 15px;
-    padding-bottom: 15px; }
-    footer .container-fluid a {
-      color: #fff; }
-      footer .container-fluid a:hover, footer .container-fluid a:focus {
-        text-decoration: underline; }
-    footer .container-fluid .ly-footer-address {
-      list-style-type: none;
-      margin: 0;
-      margin-bottom: 8px;
-      padding: 0; } }
-    @media all and (min-width: 768px) {
-      footer .container-fluid .ly-footer-address {
-        margin-bottom: 0; } }
-    @media all and (min-width: 1200px) {
-      footer .container-fluid .ly-footer-address li {
-        display: inline-flex;
-        margin-right: 6px; } }
-
-@media all {
-  /*DNN Overrides and default styles (do not change) */
-  /* box-sizing Fixes for DNN components, 3dr party plugins, modules */
-  #ControlBar_ControlPanel * {
-    box-sizing: content-box; }
-  #ControlBar_ControlPanel .mark {
-    background-color: transparent;
-    padding: 0; }
-  #ControlNav > li > a {
-    text-decoration: none; }
-  .actionMenu * {
-    box-sizing: content-box; }
-  .dnnCheckbox .mark {
-    padding: 0;
-    background: none; }
-  .ui-dialog {
-    color: black;
-    font-family: Arial, sans-serif; }
-  ul, ol {
-    margin: 0; }
-  ul {
-    list-style-type: disc; }
-    ul ul {
-      list-style-type: circle; }
-  a.ly-login, a.ly-login:link, a.ly-login:visited {
-    color: blue;
-    font-size: 10px; }
-  a.ly-login:hover {
-    color: #fff; }
-  #ControlBar_ControlPanel #ServiceImg {
-    display: none; } }
-
-@media print {
-  a[href]:after {
-    content: "" !important; }
-  .ly-nav-mobile-trigger {
-    display: block; } }
 
 
 /*# sourceMappingURL=main.min.css.map*/
