@@ -10,11 +10,11 @@
 // Bootstrap will keep what we set here, and only set variables we have not defined yet
 
 // 2.1 Set primary and secondary color - used all over the theme
-$primary: 			blue;
+$primary: 			#563d7c;
 $secondary: 		#6c757d;
 
 // 2.2 set Body colors
-$body-bg: 			red;
+$body-bg: 			#efefef;
 $body-color: 		#555555;
 
 
@@ -24,10 +24,27 @@ $tosic-footer-background: $primary;
 $tosic-footer-color: 			#fff;
 $tosic-link-decoration:		none;
 
+// ----------------------------------------------------------------------------------------------------
+// 3. Special CSS for specific pages
+// The body tag always has things like tab-xx to say what page it's on. Use these to target special CSS.
+// Classes you can use are:
+// - tab-##
+// - tab-is-home (this class is only added on home)
+// - root-tab-## the top level tab which is activated, to allow different colors across an entire section
+// - lang-en / lang-de etc. 
+
+// Set the width of the logo specifically for the home page only
+// .tab-is-home {
+// 	header {
+// 		.ly-logo {
+// 			width: 250px;
+// 		}
+// 	}
+// }
 
 
 // ----------------------------------------------------------------------------------------------------
-// 3. Variables we often override
+// 4. Variables we often override
 // These are placed after the bootstrap variables import, so that things like $gray already exist
 // Unocmment the lines you want to change, or get more from the ../../node_modules/bootstrap/scss/variables.scss
 
@@ -87,7 +104,7 @@ $font-family-base: $font-family-sans-serif;
 
 
 // ----------------------------------------------------------------------------------------------------
-// 4. Initialize the default bootstrap variables so they are ready
+// 5. Initialize the default bootstrap variables so they are ready
 // Tip: Ctrl+Click on the link in VS-code to access the file directly
 @import "../../node_modules/bootstrap/scss/variables";
 

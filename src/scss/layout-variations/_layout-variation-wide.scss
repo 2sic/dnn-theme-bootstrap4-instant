@@ -26,7 +26,7 @@
       }
     }
 
-    &.tab-home {
+    &.tab-is-home {
       .ly-header-pane {
         @include media-breakpoint-up(xl) {
           margin-bottom: -200px;

@@ -1,6 +1,6 @@
 {
   "name": "2sic-standard-skin-template",
-  "version": "03.00.02",
+  "version": "03.05.00",
   "description": "The default skin template for 2sic websites",
   "main": "(none)",
   "scripts": {
@@ -14,7 +14,7 @@
     "copy-lib-sidr-css": "cpx \"node_modules\\sidr\\dist\\stylesheets\\jquery.sidr.dark.min.css\" \"dist\\lib\""
   },
   "author": "2sic internet solutions",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "https://github.com/2sic/dnn-theme-bootstrap4-instant",
   "devDependencies": {
     "autoprefixer": "^9.6.4",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@types/jquery": "^3.3.29",
-    "bootstrap": "^4.1.3",
+    "bootstrap": "^4.4.1",
     "popper.js": "^1.14.3",
     "sidr": "2.2.1"
   }
