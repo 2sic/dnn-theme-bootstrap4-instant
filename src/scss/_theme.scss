@@ -1,0 +1,119 @@
+﻿// ----------------------------------------------------------------------------------------------------
+// 1. Load Bootstrap 4 Helpers
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+// ----------------------------------------------------------------------------------------------------
+// 2. Set Bootstrap Core Variables Presets
+// These variables should be set before we load the standard bootstrap variables
+// Bootstrap will keep what we set here, and only set variables we have not defined yet
+
+// 2.1 Set primary and secondary color - used all over the theme
+$primary: 			blue;
+$secondary: 		#6c757d;
+
+// 2.2 set Body colors
+$body-bg: 			red;
+$body-color: 		#555555;
+
+
+// 2.3 Custom Bootstrap Instant 4 Theme variables - used in the variations of the themes */
+$tosic-header-background: #fff; /* TODO: use .navbar-inverse insetad of .navbar-default in default.ascx for dark headers */
+$tosic-footer-background: $primary;
+$tosic-footer-color: 			#fff;
+$tosic-link-decoration:		none; // Custom 2sic variable
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// 3. Variables we often override
+// These are placed after the bootstrap variables import, so that things like $gray already exist
+// Unocmment the lines you want to change, or get more from the ../../node_modules/bootstrap/scss/variables.scss
+
+// Fonts
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans",sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+// Links
+// Style anchor elements.
+// $link-color: $primary;
+// $link-decoration: none;
+// $link-hover-color: darken($link-color, 15%);
+// $link-hover-decoration: none;
+
+// Fonts
+// Font, line-height, and color for body text, headings, and more.
+// $font-size-base: 1rem; // Assumes the browser default, typically `16px`
+// $font-size-lg: ($font-size-base * 1.25);
+// $font-size-sm: ($font-size-base * .875);
+
+// $font-weight-light: 300;
+// $font-weight-normal: 400;
+// $font-weight-bold: 700;
+
+// $font-weight-base: $font-weight-normal;
+// $line-height-base: 1.42857;
+
+// $h1-font-size: $font-size-base * 2.125;
+// $h2-font-size: $font-size-base * 1.7;
+// $h3-font-size: $font-size-base * 1.25;
+// $h4-font-size: $font-size-base * 1.25;
+// $h5-font-size: $font-size-base;
+// $h6-font-size: $font-size-base;
+
+// $headings-font-family: inherit;
+// $headings-font-weight: 700;
+// $headings-line-height: 1.2;
+// $headings-color: inherit;
+
+// $display1-size: 6rem;
+// $display2-size: 5.5rem;
+// $display3-size: 4.5rem;
+// $display4-size: 3.5rem;
+
+// $display1-weight: 300;
+// $display2-weight: 300;
+// $display3-weight: 300;
+// $display4-weight: 300;
+// $display-line-height: $headings-line-height;
+
+// $lead-font-size: ($font-size-base * 1.25);
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// 4. Initialize the default bootstrap variables so they are ready
+// Tip: Ctrl+Click on the link in VS-code to access the file directly
+@import "../../node_modules/bootstrap/scss/variables";
+
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// 9. Final adjustments / tweaking / DNN workarounds
+
+// 9.1 2sic Bootstrap overrides
+// TODO: why are they here
+a.btn-primary.btn-primary {
+	&:link, &:visited, &:hover {
+		color: #fff;
+	}
+}
+a.btn.btn {
+	&:link, &:visited, &:hover {
+		text-decoration: none;
+	}
+}
+
+// 9.2 Override width of DNNEmptyPane for 2sxc Quick-Edit control (DNN9)
+body:not(.dnnEditState) .DNNEmptyPane {
+	width: 100%;
+}
+
+

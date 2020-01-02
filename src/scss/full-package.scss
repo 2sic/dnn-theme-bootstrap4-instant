@@ -1,10 +1,9 @@
-@import "_bootstrap-override";
+// Initialize Theme styles and all default Bootstrap Variables
+@import "_theme";
 
-
-
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+// The following bootstrap parts are used by the default setup
+// so we are including them here
+// @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
@@ -26,6 +25,9 @@
 @import "../../node_modules/bootstrap/scss/close";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/print";
+
+// The following bootstrap parts are not used by the default setup
+// But in case you need them, we didn't remove them but commented them out
 //@import "../../node_modules/bootstrap/scss/jumbotron";
 //@import "../../node_modules/bootstrap/scss/progress";
 //@import "../../node_modules/bootstrap/scss/toasts";
