@@ -3,12 +3,19 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.DDRMenu.TemplateEngine" Assembly="DotNetNuke.Web.DDRMenu" %>
 <%@ Register TagPrefix="dnn" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
+
+<%-- Change the page title to contain the breadcrumbi in an SEO optimized way --%>
 <%@ Register TagPrefix="tosic" TagName="PageTitle" src="controls/optimize-page-title.ascx" %>
 <tosic:PageTitle runat="server" />
-<%@ Register TagPrefix="tosic" TagName="BodyCssClasses" src="controls/body-css-classes.ascx" %>
-<tosic:BodyCssClasses runat="server" />
 
-<%--
+<%-- Set common CSS classes on the body which determine the Layout
+	Layout="..." are: Default, Wide, Full, Box
+	Navigation="...": Right, Center, Left
+--%>
+<%@ Register TagPrefix="tosic" TagName="BodyCssClasses" src="controls/body-css-classes.ascx" %>
+<tosic:BodyCssClasses runat="server" Layout="Default" Navigation="Right"/>
+
+<%-- Activate Quick-Edit in empty pages if 2sxc is installed
   more infos on 2sxc quick-edit: https://2sxc.org/en/blog/post/quick-edit-2-add-move-delete-modules-in-preview-touch-capable-for-dnn
 --%>
 <%@ Register TagPrefix="tosic" TagName="SxcQuickEdit" src="controls/2sxc-quickedit.ascx" %>
