@@ -9,6 +9,9 @@
 		line-height: 1.6em;
 	}
 	p { margin-bottom: $font-size-base * 0.6875; }
+	h1, h2 ,h3, h4, h5, h6 {
+		font-family:$font-family-base;
+	}
 	h1, h2 { 
 		font-weight: $headings-font-weight;
 	}
