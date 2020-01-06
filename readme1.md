@@ -49,4 +49,4 @@ To get the awesome designed content, install [2sxc](https://github.com/2sic/2sxc
 
 ## Love from Switzerland
 
-Daniel & Luca
+Daniel & Tom
