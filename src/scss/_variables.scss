@@ -10,19 +10,19 @@
 // Bootstrap will keep what we set here, and only set variables we have not defined yet
 
 // 2.1 Set primary and secondary color - used all over the theme
-$primary: 			#563d7c;
-$secondary: 		#6c757d;
+$primary:       #563d7c;
+$secondary:     #6c757d;
 
 // 2.2 set Body colors
-$body-bg: 			#efefef;
-$body-color: 		#555555;
+$body-bg:       #efefef;
+$body-color:    #555555;
 
 
 // 2.3 Custom Bootstrap Instant 4 Theme variables - used in the variations of the themes */
 $tosic-header-background: #fff;
 $tosic-footer-background: $primary;
-$tosic-footer-color: 			#fff;
-$tosic-link-decoration:		none;
+$tosic-footer-color:      #fff;
+$tosic-link-decoration:   none;
 
 // ----------------------------------------------------------------------------------------------------
 // 3. Special CSS for specific pages
@@ -35,11 +35,11 @@ $tosic-link-decoration:		none;
 
 // Set the width of the logo specifically for the home page only
 // .tab-is-home {
-// 	header {
-// 		.ly-logo {
-// 			width: 250px;
-// 		}
-// 	}
+//   header {
+//     .ly-logo {
+//       width: 250px;
+//     }
+//   }
 // }
 
 
@@ -101,35 +101,8 @@ $font-family-base: $font-family-sans-serif;
 // $lead-font-size: ($font-size-base * 1.25);
 
 
-
-
 // ----------------------------------------------------------------------------------------------------
 // 5. Initialize the default bootstrap variables so they are ready
-// Tip: Ctrl+Click on the link in VS-code to access the file directly
+// Tip: In VS-Code, Ctrl+Click on the link below to open the file
 @import "../../node_modules/bootstrap/scss/variables";
-
-
-
-
-
-// ----------------------------------------------------------------------------------------------------
-// 9. Final adjustments / tweaking / DNN workarounds
-
-// 9.1 Fix links which look like buttons so the text doesn't get underlined
-a.btn-primary.btn-primary {
-	&:link, &:visited, &:hover {
-		color: #fff;
-	}
-}
-a.btn.btn {
-	&:link, &:visited, &:hover {
-		text-decoration: none;
-	}
-}
-
-// 9.2 Override width of DNNEmptyPane for 2sxc Quick-Edit control (DNN9)
-body:not(.dnnEditState) .DNNEmptyPane {
-	width: 100%;
-}
-
 

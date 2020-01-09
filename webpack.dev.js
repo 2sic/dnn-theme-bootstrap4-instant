@@ -4,10 +4,10 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
 module.exports = {
-  entry: ['./src/scss/full-package.scss', './src/ts/main.ts'],
+  entry: ['./src/scss/theme.scss', './src/ts/theme.ts'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.min.js',
+    filename: 'theme.min.js',
   },
   mode: 'development',
   devtool: 'source-map',
@@ -21,7 +21,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'main.min.css',
+      filename: 'theme.min.css',
     }),
     new WebpackBar(),
     new FriendlyErrorsWebpackPlugin(),

@@ -29,4 +29,25 @@
 		display:none;
 	}
 
+	// ----------------------------------------------------------------------------------------------------
+	// 9. Final adjustments / tweaking / DNN workarounds
+
+	// 9.1 Fix links which look like buttons so the text doesn't get underlined
+	a.btn-primary.btn-primary {
+		&:link, &:visited, &:hover {
+			color: #fff;
+		}
+	}
+	a.btn.btn {
+		&:link, &:visited, &:hover {
+			text-decoration: none;
+		}
+	}
+
+	// 9.2 Override width of DNNEmptyPane for 2sxc Quick-Edit control (DNN9)
+	body:not(.dnnEditState) .DNNEmptyPane {
+		width: 100%;
+	}
+
+
 }
