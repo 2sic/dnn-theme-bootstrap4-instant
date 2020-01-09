@@ -6134,6 +6134,7 @@ a.text-dark:hover, a.text-dark:focus {
       box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.3);
       position: fixed;
       top: -150px;
+      left: 0;
       transition: top 0.4s ease-in-out; }
       header.fixed-header.fixed-top {
         top: 0; }
@@ -6328,108 +6329,113 @@ a.text-dark:hover, a.text-dark:focus {
                     padding-left: 40px; } }
 
 @media all {
-  #nav-mobile {
-    display: none; }
-  .ly-nav-mobile-trigger {
-    display: block;
-    margin: 0;
-    padding: 10px;
-    outline: none !important;
-    z-index: 9999999; } }
+  .ly-hamburger {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    z-index: 1040;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center; } }
   @media all and (min-width: 768px) {
-    .ly-nav-mobile-trigger {
-      margin-top: 10px; } }
+    .ly-hamburger {
+      right: 25px; } }
   @media all and (min-width: 992px) {
-    .ly-nav-mobile-trigger {
+    .ly-hamburger {
       display: none; } }
 
-@media all and (min-width: 768px) {
-  .fixed-header .ly-nav-mobile-trigger {
-    margin-top: 0px; } }
+@media all {
+    .ly-hamburger > div {
+      width: 100%;
+      position: relative;
+      height: 18px; }
+    .ly-hamburger span {
+      display: block;
+      background-color: #563d7c;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      border-radius: 4px; }
+      .ly-hamburger span:nth-child(1) {
+        top: 0px;
+        left: 0px;
+        transition: transform 0.4s, top 0.4s; }
+      .ly-hamburger span:nth-child(2) {
+        top: 8px;
+        left: 0px;
+        transition: left 0.5s, opacity 0.5s; }
+      .ly-hamburger span:nth-child(3) {
+        top: 16px;
+        left: 0px;
+        transition: transform 0.4s, top 0.4s; }
+    .ly-hamburger.open {
+      height: 65px; }
+      .ly-hamburger.open span:nth-child(1) {
+        transform: rotate(135deg);
+        top: 8px; }
+      .ly-hamburger.open span:nth-child(2) {
+        left: 60px;
+        opacity: 0; }
+      .ly-hamburger.open span:nth-child(3) {
+        transform: rotate(-135deg);
+        top: 8px; }
+  .ly-disablescroll {
+    overflow: hidden; } }
+  @media all and (min-width: 992px) {
+    .ly-disablescroll {
+      overflow-y: auto; } }
 
 @media all {
-  .ly-close {
-    height: 30px;
-    width: 30px;
-    margin-top: 8px;
-    position: relative;
-    box-sizing: border-box;
-    line-height: 30px;
-    display: inline-block; }
-    .ly-close:before, .ly-close:after {
-      transform: rotate(-45deg);
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -5px;
-      margin-left: -15px;
-      display: block;
-      height: 2px;
-      width: 30px;
-      background-color: #563d7c; }
-    .ly-close:after {
-      transform: rotate(45deg); }
-  .sidr-open .ly-nav-mobile-trigger:after,
-  .sidr-open .ly-nav-mobile-trigger:before {
-    border-color: #563d7c; }
-  /* SIDR Off-Canvas Menu Styling */
-  .ly-disablescroll {
-    overflow: hidden; }
-  .sidr {
-    display: block;
-    padding-bottom: 60px;
-    position: fixed;
-    top: 0;
+  #nav-mobile {
+    width: 100%;
     height: 100vh;
-    min-height: 100vh;
-    z-index: 999999;
-    width: 100%;
-    max-width: 480px;
+    position: fixed;
+    z-index: 1020;
+    bottom: 0;
+    left: -100%;
+    top: 0%;
+    background-color: #563d7c;
+    transition: transform 0.3s ease-in-out;
     overflow-x: hidden;
-    overflow-y: auto;
-    background: #563d7c;
-    color: #fff; }
-    .sidr .sidr-inner {
-      overflow: hidden;
-      position: relative; }
-    .sidr.right {
-      left: auto;
-      right: -280px; }
-    .sidr.left {
-      left: -100%;
-      right: auto; }
-  .ly-disablescroll .sidr {
-    box-shadow: 15px 0 50px rgba(0, 0, 0, 0.55); }
-  .ly-header-mobile {
-    background: #FFF;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    z-index: 50;
-    height: 65px;
-    box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3); }
-    .ly-header-mobile .container-fluid, .ly-header-mobile .container-sm, .ly-header-mobile .container-md, .ly-header-mobile .container-lg, .ly-header-mobile .container-xl {
-      padding-left: 15px;
-      padding-right: 25px;
-      display: flex;
-      justify-content: space-between; }
-    .ly-header-mobile .ly-logo {
-      display: block;
-      width: 120px; }
-      .ly-header-mobile .ly-logo img {
-        width: 100%;
-        max-width: 100%;
-        height: auto; }
-      .ly-header-mobile .ly-logo svg {
-        max-height: 54px; }
+    overflow-y: auto; } }
+  @media all and (min-width: 992px) {
+    #nav-mobile {
+      display: none; } }
+
+@media all {
+    #nav-mobile.open {
+      transform: translateX(100%); }
+    #nav-mobile .ly-header-mobile {
+      background: #fff;
+      padding: 10px 0;
+      position: absolute;
+      width: 100%;
+      z-index: 50;
+      height: 65px;
+      box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3); }
+      #nav-mobile .ly-header-mobile .container-fluid, #nav-mobile .ly-header-mobile .container-sm, #nav-mobile .ly-header-mobile .container-md, #nav-mobile .ly-header-mobile .container-lg, #nav-mobile .ly-header-mobile .container-xl {
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between; }
+      #nav-mobile .ly-header-mobile .ly-logo {
+        display: block;
+        width: 120px; }
+        #nav-mobile .ly-header-mobile .ly-logo img {
+          width: 100%;
+          max-width: 100%;
+          height: auto; }
+        #nav-mobile .ly-header-mobile .ly-logo svg {
+          max-height: 54px; }
   /* Region Mobile Navigation (in Sidr) */
   .ly-nav-mobile {
     margin: 15px 0;
     margin-top: 65px;
     /* default styling for all li */
     /* level 1 */ }
-    .ly-nav-mobile, .ly-nav-mobile ul {
+    .ly-nav-mobile,
+    .ly-nav-mobile ul {
       margin-left: 0;
       padding: 0;
       list-style-type: none; }
@@ -6439,9 +6445,15 @@ a.text-dark:hover, a.text-dark:focus {
         transition: color 0.4s;
         color: rgba(255, 255, 255, 0.8);
         display: block;
-        padding: 10px 40px 10px 15px; }
+        padding: 10px 40px 10px 15px; } }
+      @media all and (min-width: 768px) {
+        .ly-nav-mobile li a {
+          font-size: 20px; } }
+
+@media all {
         .ly-nav-mobile li a:hover, .ly-nav-mobile li a:focus {
-          color: white; }
+          color: white;
+          text-decoration: none; }
       .ly-nav-mobile li.active > .ly-linkwrapper a {
         color: white; }
       .ly-nav-mobile li .ly-linkwrapper {
@@ -6506,49 +6518,7 @@ a.text-dark:hover, a.text-dark:focus {
                     .ly-nav-mobile > li > ul > li > ul > li > ul > li > ul > li {
                       /* mobilenavigation level 5+ */ }
                       .ly-nav-mobile > li > ul > li > ul > li > ul > li > ul > li > .ly-linkwrapper > a {
-                        padding-left: 55px; }
-  /*Burger Icon*/ }
-
-@media all and (min-width: 768px) {
-  .fixed-header #nav-icon {
-    margin: 10px 0; } }
-
-@media all {
-  #nav-icon {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    margin: 10px 0;
-    cursor: pointer; } }
-  @media all and (min-width: 768px) {
-    #nav-icon {
-      margin: 20px 0; } }
-
-@media all {
-  #nav-icon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #563d7c;
-    border-radius: 2px;
-    opacity: 1;
-    left: 0; }
-  #nav-icon span:nth-child(1) {
-    top: 0px; }
-  #nav-icon span:nth-child(2) {
-    top: 8px; }
-  #nav-icon span:nth-child(3) {
-    top: 16px; }
-  .ly-overlay {
-    display: none;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(86, 61, 124, 0.6);
-    z-index: 2000; } }
+                        padding-left: 55px; } }
 
 @media all {
   a.ly-top {

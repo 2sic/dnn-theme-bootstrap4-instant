@@ -1,241 +1,249 @@
 @media all {
-    #nav-mobile {
-        display: none;
+  // MENU animation and Hamburger
+  .ly-hamburger {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    z-index: 1040;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-up(md) {
+      right: 25px;
     }
-    .ly-nav-mobile-trigger {
-        display: block;
-        margin: 0;
-        padding: 10px;
-        outline: none!important;
-        z-index: 9999999;
-        @include media-breakpoint-up(md)  {
-            margin-top:10px;
-        }
-        @include media-breakpoint-up(lg)  {
-            display: none;
-        }
+    @include media-breakpoint-up(lg) {
+      display: none;
     }
-    .fixed-header .ly-nav-mobile-trigger {
-        @include media-breakpoint-up(md) {
-            margin-top:0px;
-        }
+    > div {
+      width: 100%;
+      position: relative;
+      height: 18px;
     }
-    .ly-close {
-        height: 30px;
-        width: 30px;
-        margin-top: 8px;
-        position: relative;
-        box-sizing: border-box;
-        line-height: 30px;
-        display: inline-block;
-        &:before,
-        &:after {
-            transform: rotate(-45deg);
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -5px;
-            margin-left: -15px;
-            display: block;
-            height: 2px;
-            width: 30px;
-            background-color: theme-color("primary");
-        }
-        &:after {
-            transform: rotate(45deg);
-        }
+    span {
+      display: block;
+      background-color: $primary;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      border-radius: 4px;
+      &:nth-child(1) {
+        top: 0px;
+        left: 0px;
+        transition: transform 0.4s, top 0.4s;
+      }
+      &:nth-child(2) {
+        top: 8px;
+        left: 0px;
+        transition: left 0.5s, opacity 0.5s;
+      }
+      &:nth-child(3) {
+        top: 16px;
+        left: 0px;
+        transition: transform 0.4s, top 0.4s;
+      }
     }
-    .sidr-open .ly-nav-mobile-trigger:after,
-    .sidr-open .ly-nav-mobile-trigger:before {
-        border-color: theme-color("primary");
-    }
-    /* SIDR Off-Canvas Menu Styling */
-    .ly-disablescroll {
-        overflow: hidden;
-    }
-    .sidr {
-        display: block;
-        padding-bottom: 60px;
-        position: fixed;
-        top: 0;
-        height: 100vh;
-        min-height: 100vh;
-        z-index: 999999;
-        width: 100%;
-        max-width: 480px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        background: theme-color("primary");
-        color: #fff;
-        .sidr-inner {
-            overflow: hidden;
-            position: relative;
+    &.open {
+      height: 65px;
+      span {
+        &:nth-child(1) {
+          transform: rotate(135deg);
+          top: 8px;
         }
-        &.right {
-            left: auto;
-            right: -280px;
+        &:nth-child(2) {
+          left: 60px;
+          opacity: 0;
         }
-        &.left {
-            left: -100%;
-            right: auto;
+        &:nth-child(3) {
+          transform: rotate(-135deg);
+          top: 8px;
         }
+      }
     }
-    .ly-disablescroll .sidr {
-        box-shadow: 15px 0 50px rgba(0, 0, 0, .55);
+  }
+  .ly-disablescroll {
+    overflow: hidden;
+    @include media-breakpoint-up(lg) {
+      overflow-y: auto;
+    }
+  }
+// MENU Wrapper
+  #nav-mobile {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1020;
+    bottom: 0;
+    left: -100%;
+    top: 0%;
+    background-color: $primary;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+    &.open {
+      transform: translateX(100%);
     }
     .ly-header-mobile {
-        background: #FFF;
-        padding: 10px 0;
-        position: absolute;
-        width: 100%;
-        z-index: 50;
-        height: 65px;
-        -webkit-box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
-        box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
-        .container-fluid {
-            padding-left: 15px;
-            padding-right: 25px;
-            display:flex;
-            justify-content: space-between;
+      background: #fff;
+      padding: 10px 0;
+      position: absolute;
+      width: 100%;
+      z-index: 50;
+      height: 65px;
+      -webkit-box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 9px 20px -4px rgba(0, 0, 0, 0.3);
+      .container-fluid {
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .ly-logo {
+        display: block;
+        width: 120px;
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
         }
-        .ly-logo {
-            display: block;
-            width: 120px;
-            img {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-            }
-            svg {
-                max-height: 54px;
-            }
+        svg {
+          max-height: 54px;
         }
+      }
     }
-    /* Region Mobile Navigation (in Sidr) */
-    .ly-nav-mobile { 
-        margin: ($grid-gutter-width / 2) 0;
-        margin-top:65px;
-        &,ul {
-          margin-left: 0;
-          padding: 0;
-          list-style-type: none;
+  }
+  // MENU Styling
+  
+  /* Region Mobile Navigation (in Sidr) */
+  .ly-nav-mobile {
+    margin: ($grid-gutter-width / 2) 0;
+    margin-top: 65px;
+    &,
+    ul {
+      margin-left: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    /* default styling for all li */
+    li {
+      border-bottom: 1px solid rgba($black, 1);
+      a {
+        transition: color 0.4s;
+        color: rgba($white, 0.8);
+        display: block;
+        padding: 10px 40px 10px 15px;
+        @include media-breakpoint-up(md) {
+          font-size:20px;
         }
-        /* default styling for all li */
-        li {
-          border-bottom: 1px solid  rgba($black,1.0);
-          a {
-            transition: color 0.4s;
-            color: rgba($white,0.8);
+        &:hover,
+        &:focus {
+          color: rgba($white, 1);
+          text-decoration: none;
+        }
+      }
+      &.active > .ly-linkwrapper a {
+        color: rgba($white, 1);
+      }
+      .ly-linkwrapper {
+        position: relative;
+        .ly-navopener {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba($black, 0.3);
+          position: absolute;
+          right: 0;
+          width: 40px;
+          text-align: center;
+          top: 0;
+          bottom: 0;
+          cursor: pointer;
+
+          .ly-navopener-icon {
+            font-size: 20px;
+            font-family: sans-serif;
+
+            &:before {
+              content: "+";
+            }
+          }
+        }
+      }
+      &.ly-active > .ly-linkwrapper {
+        .ly-navopener {
+          .ly-navopener-icon {
+            &:before {
+              content: "–";
+            }
+          }
+        }
+      }
+      li {
+        border-bottom: 1px solid rgba($primary, 1);
+        &.active {
+          .ly-nav-child {
             display: block;
-            padding: 10px 40px 10px 15px;
-            &:hover,
-            &:focus {
-              color: rgba($white,1.0);
-            }
-          }
-          &.active >.ly-linkwrapper a {
-            color: rgba($white,1.0);
-          }
-          .ly-linkwrapper {
-            position: relative;
-            .ly-navopener {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background: rgba($black, 0.3);
-              position: absolute;
-              right: 0;
-              width: 40px;
-              text-align: center;
-              top: 0;
-              bottom: 0;
-              cursor: pointer;
-    
-              .ly-navopener-icon {
-                font-size: 20px;
-                font-family: sans-serif;
-    
-                &:before {
-                  content: "+";
-                }
-              }
-            }
-          }
-          &.ly-active >.ly-linkwrapper {
-            .ly-navopener {
-              .ly-navopener-icon {
-                &:before {
-                  content: "–";
-                }
-              }
-            }
-          }
-          li {
-            border-bottom: 1px solid rgba($primary,1.0);
-            &.active {
-              .ly-nav-child {
-                display: block;
-              }
-            }
-            &.last {
-              border-bottom: none;
-            }
-            li {
-                a {
-                    font-size: 0.85em;
-                }
-            }
           }
         }
-        /* level 1 */
-        >li {
-          &.active {
-            >a {
-              color: $primary !important;
-            }
-            >.ly-nav-child {
-              display: block;
-            }
+        &.last {
+          border-bottom: none;
+        }
+        li {
+          a {
+            font-size: 0.85em;
           }
-          /* mobilenavigation level 2 */
-          >ul {
-            background-color: rgba($black, 0.4);
+        }
+      }
+    }
+    /* level 1 */
+    > li {
+      &.active {
+        > a {
+          color: $primary !important;
+        }
+        > .ly-nav-child {
+          display: block;
+        }
+      }
+      /* mobilenavigation level 2 */
+      > ul {
+        background-color: rgba($black, 0.4);
+        display: none;
+        > li {
+          > .ly-linkwrapper > a {
+            padding-left: 25px;
+          }
+          /* mobilenavigation level 3 */
+          > ul {
             display: none;
-            >li {
-              >.ly-linkwrapper >a {
-                padding-left: 25px;
+            background: rgba($black, 0.3);
+            > li {
+              > .ly-linkwrapper > a {
+                padding-left: 35px;
               }
-              /* mobilenavigation level 3 */
-              >ul {
+              /* mobilenavigation level 4 */
+              > ul {
                 display: none;
                 background: rgba($black, 0.3);
-                >li {
-                  >.ly-linkwrapper >a {
-                    padding-left: 35px;
+
+                > li {
+                  > .ly-linkwrapper > a {
+                    padding-left: 45px;
                   }
-                  /* mobilenavigation level 4 */
-                  >ul {
+                  /* mobilenavigation level 5+ */
+                  > ul {
                     display: none;
                     background: rgba($black, 0.3);
-    
-                    >li {
-                      >.ly-linkwrapper >a {
-                        padding-left: 45px;
+
+                    > li {
+                      > .ly-linkwrapper > a {
+                        padding-left: 55px;
                       }
                       /* mobilenavigation level 5+ */
-                      >ul {
-                        display: none;
-                        background: rgba($black, 0.3);
-        
-                        >li {
-                          >.ly-linkwrapper >a {
-                            padding-left: 55px;
-                          }
-                          /* mobilenavigation level 5+ */
-                        }
-                      }
                     }
                   }
                 }
@@ -244,50 +252,6 @@
           }
         }
       }
-
-    /*Burger Icon*/
-    .fixed-header #nav-icon {
-        @include media-breakpoint-up(md) {
-            margin: 10px 0;
-        }
     }
-    #nav-icon {
-        width: 30px;
-        height: 20px;
-        position: relative;
-        margin: 10px 0;
-        cursor: pointer;
-        @include media-breakpoint-up(md) {
-            margin: 20px 0;
-        }
-    }
-    #nav-icon span {
-        display: block;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background: theme-color("primary");
-        border-radius: 2px;
-        opacity: 1;
-        left: 0;
-    }
-    #nav-icon span:nth-child(1) {
-        top: 0px;
-    }
-    #nav-icon span:nth-child(2) {
-        top: 8px;
-    }
-    #nav-icon span:nth-child(3) {
-        top: 16px;
-    }
-    .ly-overlay {
-        display: none;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba($primary, 0.6);
-        z-index: 2000;
-    }
+  }
 }

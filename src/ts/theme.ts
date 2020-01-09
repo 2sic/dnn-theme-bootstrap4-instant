@@ -2,48 +2,16 @@ $(function () {
 	/* Open all PDF links in a new window */
 	$('a[href$=".pdf"]').attr('target', '_blank');
 
-	/* SIDR Off-Canvas Menu */
-	($('.ly-nav-mobile-trigger') as any).sidr({
-		name: 'nav-main-offcanvas',
-		source: "#nav-mobile",
-		renaming: false,
-		body: 'form',
-		displace: false, // change to true if sidr has bugs with your layout
-		onOpen: () => {
-			$('body').addClass('ly-disablescroll');
-			$('.ly-overlay').fadeIn(200);
-		},
-		onClose: () => {
-			$('body').removeClass('ly-disablescroll');
-			$('.ly-overlay').fadeOut(200);
-		}
-	});
-
-	/* More responsiveness by using touchstart */
-	$('.ly-nav-mobile-trigger').on("touchstart", (e: JQueryEventObject) => {
-		e.preventDefault();
-		($ as any).sidr('open', 'nav-main-offcanvas');
-	});
-
-	$('a.ly-close').on('click', (e: JQueryEventObject) => {
-		e.preventDefault();
-		($ as any).sidr("close", "nav-main-offcanvas");
-	});
-	$(window).resize(() => {
-		($ as any).sidr("close", "nav-main-offcanvas");
-	});
-
-	$(document).on("touchmove", "form.sidr-open", (e: JQueryEventObject) => {
-		e.preventDefault();
-	});
-
-	$(document).on("click", "form.sidr-open", (e: JQueryEventObject) => {
-		e.preventDefault();
-		($ as any).sidr("close", "nav-main-offcanvas");
-	});
-
+  
 	/* Mobile Navigation */
-	$('#nav-main-offcanvas .ly-navopener').on('click', () => {
+	$('.ly-hamburger').on("click", () => {
+		$('.ly-hamburger').toggleClass('open');
+    $('#nav-mobile').toggleClass('open');
+		$('body').toggleClass('ly-disablescroll');
+	});
+
+	
+	$('#nav-mobile .ly-navopener').on('click', () => {
 		if(!$(event.currentTarget).parent().parent().hasClass('ly-active')) {
 			if(!$(event.currentTarget).parents('.has-child').hasClass('ly-active')) {
 				$('.ly-active').find('ul:first').slideUp();
@@ -54,6 +22,8 @@ $(function () {
 			$(event.currentTarget).parent().parent().toggleClass('ly-active').find('ul:first').slideUp();
 		}
 	});
+
+
 
 	/* Desktop Navigation */
 	$('#nav-sub .ly-navopener').on('click', () => {

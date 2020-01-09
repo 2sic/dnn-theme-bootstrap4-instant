@@ -30,17 +30,13 @@
 
 <div class="ly-fullwrapper">
 	<header>
-		<div class="container-fluid d-flex">
-			<div class="ly-overlay"></div>	
-			<div id="nav-icon" class="ly-nav-mobile-trigger float-left" title="Menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+		<div class="container-fluid d-flex">			
+			<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
+				<img alt="Logo" class="img-fluid" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
+			</a>
 			<nav id="nav-mobile">
 				<div class="ly-header-mobile">
 					<div class="container-fluid">
-						<a href="#" class="ly-close"></a>
 						<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
 							<img alt="Logo" class="img-fluid" src="<%#SkinPath%>images/logo.svg" data-fallback="<%#SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
 						</a>
@@ -48,11 +44,13 @@
 				</div>
 				<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
 			</nav>
-
-			<a class="ly-logo" href="/" title="Bootstrap 4 Instant (change this in the default.ascx)">			
-				<img alt="Logo" class="img-fluid" src="<%=SkinPath%>images/logo.svg" data-fallback="<%=SkinPath%>images/logo.png" onerror="this.src=this.getAttribute('data-fallback');this.onerror=null;">
-			</a>
-
+	<div id="nav-icon" class="ly-hamburger" title="Menu">
+				<div>
+				<span></span>
+				<span></span>
+				<span></span>
+				</div>
+			</div>
 			<nav id="nav-desktop" class="navbar d-none d-lg-block">
 				<dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
 			</nav>
@@ -122,7 +120,6 @@
 <dnn:DnnCssInclude runat="server" FilePath="dist/theme.min.css" Priority="100" PathNameAlias="SkinPath" />
 
 <dnn:DnnJsInclude runat="server" FilePath="dist/lib/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath"  />
-<dnn:DnnJsInclude runat="server" FilePath="dist/lib/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath"  />
 <dnn:DnnJsInclude runat="server" FilePath="dist/theme.min.js" ForceProvider="DnnFormBottomProvider" Priority="130" PathNameAlias="SkinPath" />
 
 <script defer async src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
