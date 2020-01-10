@@ -4,11 +4,11 @@
   "description": "The default skin template for 2sic websites",
   "main": "(none)",
   "scripts": {
-    "webpack": "webpack",
+    "build": "webpack",
     "copy-lib": "npm run copy-lib-jquery & npm run copy-lib-bootstrap-js & npm run copy-lib-bootstrap-css",
-    "copy-lib-jquery": "cpx \"node_modules\\jquery\\dist\\jquery.min.js\" \"dist\\lib\"",
+    "// 2dm shouldn't use: copy-lib-jquery": "cpx \"node_modules\\jquery\\dist\\jquery.min.js\" \"dist\\lib\"",
     "copy-lib-bootstrap-js": "cpx \"node_modules\\bootstrap\\dist\\js\\bootstrap.min.js\" \"dist\\lib\"",
-    "copy-lib-bootstrap-css": "cpx \"node_modules\\bootstrap\\dist\\css\\bootstrap.min.css\" \"dist\\lib\""
+    "// 2dm shouldn't use: copy-lib-bootstrap-css": "cpx \"node_modules\\bootstrap\\dist\\css\\bootstrap.min.css\" \"dist\\lib\""
   },
   "author": "2sic internet solutions",
   "license": "MIT",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@types/jquery": "^3.3.29",
     "bootstrap": "^4.4.1",
-    "popper.js": "^1.14.3",
-    "sidr": "2.2.1"
+    "popper.js": "^1.14.3"
   }
 }
