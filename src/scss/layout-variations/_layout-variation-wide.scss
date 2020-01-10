@@ -9,16 +9,31 @@
     }
     .ly-header-pane {
       margin-top: 0;
-      @media (min-width: 1450px) {
-        margin-bottom: -200px;
-        min-height: 485px + $grid-gutter-width;
+      @include media-breakpoint-up(xl) {
+        margin-bottom: -300px;
       }
       .ly-container-inner {
+        position: relative;
         @include media-breakpoint-up(xl) {
           margin-left: -200px;
           margin-right: -200px;
         }
-      }
+        &:before {
+          content:"";
+          display:none;
+          @include media-breakpoint-up(xl) {
+            display:block;
+          position: absolute;
+          z-index:1;
+          left:0;
+          width:100%;
+          bottom:0;
+          height:200px;
+          background: linear-gradient(0deg, rgba($body-bg,1) 0%, rgba($body-bg,0) 100%);
+          }
+
+        }
+            }
       /* only one module in headerpane -> bugs in dnn-sortable (moving modules in panes with drag and drop) */
       &:not(.ly-header-pane-empty) .dnnSortable {
         min-height: 0 !important;

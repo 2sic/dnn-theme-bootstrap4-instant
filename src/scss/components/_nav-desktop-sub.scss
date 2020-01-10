@@ -17,6 +17,8 @@
           &:hover,
           &:focus {
             color: $primary;
+            text-decoration: none;
+
           }
         }
         &.active >.ly-linkwrapper a {

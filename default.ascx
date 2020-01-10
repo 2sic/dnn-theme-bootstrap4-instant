@@ -8,9 +8,9 @@
 <%@ Register TagPrefix="tosic" TagName="PageTitle" src="controls/optimize-page-title.ascx" %>
 <tosic:PageTitle runat="server" />
 
-<%-- Set common CSS classes on the body which determine the Layout
-	Layout="..." are: Default, Wide, Full, Box
-	Navigation="...": Right, Center, Left
+<%-- Set common CSS classes on the body which determine the Layout 
+	Layout="Full" are: Default, Wide, Full, Box
+	Navigation="Left": Right, Center, Left
 --%>
 <%@ Register TagPrefix="tosic" TagName="BodyCssClasses" src="controls/body-css-classes.ascx" %>
 <tosic:BodyCssClasses runat="server" Layout="Default" Navigation="Right"/>
@@ -42,7 +42,9 @@
 						</a>
 					</div>
 				</div>
-				<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
+				<div class="ly-nav-mobile-container">
+					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
+				</div>
 			</nav>
 	<div id="nav-icon" class="ly-hamburger" title="Menu">
 				<div>
@@ -129,7 +131,7 @@
 	protected override void OnLoad(EventArgs e)
 	{
 		base.OnLoad(e);
-		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no' />");
+		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no' />");
 
 		// Set various FavIcon and Icon headers according to best practices
 		// The next line is disabled by default, because it requires RazorBlade to be installed.

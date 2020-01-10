@@ -1,23 +1,31 @@
 @media all {
-    /* Logo left */ /* Logo right */
-    body.va-mainnav-left {
-      .container-fluid {
+  /* Logo left */ /* Logo right */
+  body.va-mainnav-left {
+    .container-fluid {
+      @include media-breakpoint-up(lg) {
         flex-direction: row-reverse;
       }
     }
-    /* header centered */
-    body.va-mainnav-center {
-      header {
-        .container-fluid {
+  }
+  /* header centered */
+  body.va-mainnav-center {
+    header {
+      .container-fluid {
+        @include media-breakpoint-up(lg) {
           flex-direction: column !important;
           justify-content: center !important;
-          padding-bottom:0px;
-          .ly-logo {margin-bottom:10px;}
+          padding-bottom: 0px;
+        }
+
+        .ly-logo {
+          @include media-breakpoint-up(lg) {
+            margin-bottom: 10px;
+          }
         }
       }
-      .co-navigation {
-        text-align: center;
-      }
+    }
+    .co-navigation {
+      text-align: center;
     }
   }
-  
+}
