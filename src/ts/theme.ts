@@ -26,7 +26,7 @@ $(function () {
 
 
 	/* Desktop Navigation */
-	$('#nav-sub .ly-navopener').on('click', () => {
+	$('.ly-nav-sub .ly-navopener').on('click', () => {
 		if(!$(event.currentTarget).parent().parent().hasClass('ly-active')) {
 			if(!$(event.currentTarget).parents('.has-child').hasClass('ly-active')) {
 				$('.ly-active').find('ul:first').slideUp();
