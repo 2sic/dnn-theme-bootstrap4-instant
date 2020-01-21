@@ -96,6 +96,7 @@ $(function () {
 		if ($(window).scrollTop() >= navheight) {
 			$('header').addClass('fixed-header');
 			$('body').css('padding-top', navheight + 'px');
+			$('body.va-layout-landingpage').css('padding-top', '0px');
 			if ($(window).scrollTop() >= navheight + 1) {
 				$('header').addClass('fixed-top');
 			}

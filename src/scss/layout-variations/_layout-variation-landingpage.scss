@@ -1,0 +1,69 @@
+@media all {
+    /*layout full*/
+    body.va-layout-landingpage {
+      background:$white;
+      header {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 100%);
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        .container-fluid {
+          padding-top: $grid-gutter-width/2;
+          padding-bottom: $grid-gutter-width/2;
+          @include media-breakpoint-up(md) {
+            padding-top: $grid-gutter-width/1.5;
+            padding-bottom: $grid-gutter-width;
+          }
+        }
+        &.fixed-header {
+          box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.3);
+          position: fixed;
+          top: 0px;
+          left:0;
+          transition: background 0.4s ease-in-out;
+          &.fixed-top {
+            top: 0;
+            background: $dark;
+          }
+          .container-fluid {
+            padding-top: $grid-gutter-width/2;
+            padding-bottom: $grid-gutter-width/2;
+          }
+          .ly-logo {
+            width: 120px;
+            svg {
+              //If you use an SVG as Logo, you will have to give it a fixed height
+              //in this selector, orelse you may experience issues in IE */
+              height: 37px;
+            }
+          }
+        }
+      }
+  
+      .container-fluid {
+        &.ly-content { 
+          background: transparent;
+          position: relative;
+          width:100%;
+          max-width:100%;
+          padding:0;
+        }
+      }
+      footer {
+        height: 60px;
+        background: $primary;
+      }
+      .ly-fullwrapper {
+        min-height: 100%;
+        margin: 0 auto -60px;
+      }
+      #Form {
+        height: 100vh;
+      }
+      .ly-fullwrapper .ly-push {
+        height: 60px;
+      }
+    }
+  }
+  
