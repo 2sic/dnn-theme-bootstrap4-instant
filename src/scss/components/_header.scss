@@ -5,12 +5,12 @@
     z-index: 800;
     .ly-logo {
       display: block;
-      width: 120px;
+      width: 150px;
       max-width: 80%;
       height: auto;
       transition: width 0.4s ease-in-out;
       @include media-breakpoint-up(md) {
-        width: 170px;
+        width: 200px;
       }
       svg {
         //If you use an SVG as Logo, you will have to give it a fixed height
@@ -45,7 +45,7 @@
         padding-bottom: $grid-gutter-width/2;
       }
       .ly-logo {
-        width: 120px;
+        width: 150px;
         svg {
           //If you use an SVG as Logo, you will have to give it a fixed height
           //in this selector, orelse you may experience issues in IE */
