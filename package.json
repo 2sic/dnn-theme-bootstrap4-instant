@@ -4,7 +4,7 @@
   "description": "The default skin template for 2sic websites",
   "main": "(none)",
   "scripts": {
-    "build": "webpack",
+    "build-prod": "webpack",
     "copy-lib": "npm run copy-lib-jquery & npm run copy-lib-bootstrap-js & npm run copy-lib-bootstrap-css",
     "// 2dm shouldn't use: copy-lib-jquery": "cpx \"node_modules\\jquery\\dist\\jquery.min.js\" \"dist\\lib\"",
     "copy-lib-bootstrap-js": "cpx \"node_modules\\bootstrap\\dist\\js\\bootstrap.min.js\" \"dist\\lib\"",
