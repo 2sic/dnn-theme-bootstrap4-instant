@@ -1,17 +1,17 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.2.1">
+  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.10.0">
   <friendlyName>Bootstrap 4 Instant</friendlyName>
   <description>A clean, prepared bootstrap 4 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile />
   <owner>
     <name>2sic</name>
-    <organization>2sic internet solutins gmbh</organization>
+    <organization>2sic internet solutions gmbh</organization>
     <url>https://www.2sic.com/</url>
     <email>info@2sic.com</email>
   </owner>
   <license>MIT License
 
-Copyright (c) 2016 2sic Internet Solutions GmbH
+Copyright (c) 2020 2sic Internet Solutions GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -45,6 +45,14 @@ SOFTWARE.</license>
           <name>default.ascx.resx</name>
         </skinFile>
         <skinFile>
+          <path>App_LocalResources</path>
+          <name>landingpage.ascx.de-DE.resx</name>
+        </skinFile>
+        <skinFile>
+          <path>App_LocalResources</path>
+          <name>landingpage.ascx.resx</name>
+        </skinFile>
+        <skinFile>
           <path>controls</path>
           <name>2sxc-quickedit.ascx</name>
         </skinFile>
@@ -69,28 +77,28 @@ SOFTWARE.</license>
           <name>jquery.min.js</name>
         </skinFile>
         <skinFile>
-          <path>dist\lib</path>
-          <name>jquery.sidr.dark.min.css</name>
-        </skinFile>
-        <skinFile>
-          <path>dist\lib</path>
-          <name>jquery.sidr.min.js</name>
+          <path>dist</path>
+          <name>theme.min.css</name>
         </skinFile>
         <skinFile>
           <path>dist</path>
-          <name>main.min.css</name>
+          <name>theme.min.css.map</name>
         </skinFile>
         <skinFile>
           <path>dist</path>
-          <name>main.min.css.map</name>
+          <name>theme.min.js</name>
         </skinFile>
         <skinFile>
           <path>dist</path>
-          <name>main.min.js</name>
+          <name>theme.min.js.map</name>
         </skinFile>
         <skinFile>
-          <path>dist</path>
-          <name>main.min.js.map</name>
+          <path>images\landingpage</path>
+          <name>logo.png</name>
+        </skinFile>
+        <skinFile>
+          <path>images\landingpage</path>
+          <name>logo.svg</name>
         </skinFile>
         <skinFile>
           <path>images</path>
@@ -162,19 +170,19 @@ SOFTWARE.</license>
         </skinFile>
         <skinFile>
           <path>src\scss\components</path>
-          <name>_nav-inpage.scss</name>
+          <name>_nav-desktop-main.scss</name>
         </skinFile>
         <skinFile>
           <path>src\scss\components</path>
-          <name>_nav-main.scss</name>
+          <name>_nav-desktop-sub.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\scss\components</path>
+          <name>_nav-mobile-to-top.scss</name>
         </skinFile>
         <skinFile>
           <path>src\scss\components</path>
           <name>_nav-mobile.scss</name>
-        </skinFile>
-        <skinFile>
-          <path>src\scss\components</path>
-          <name>_nav-sub.scss</name>
         </skinFile>
         <skinFile>
           <path>src\scss\components</path>
@@ -202,23 +210,19 @@ SOFTWARE.</license>
         </skinFile>
         <skinFile>
           <path>src\scss\layout-variations</path>
+          <name>_layout-variation-landingpage.scss</name>
+        </skinFile>
+        <skinFile>
+          <path>src\scss\layout-variations</path>
           <name>_layout-variation-wide.scss</name>
         </skinFile>
         <skinFile>
           <path>src\scss</path>
-          <name>bootstrap.scss</name>
+          <name>readme.md</name>
         </skinFile>
         <skinFile>
           <path>src\scss</path>
-          <name>full-package.scss</name>
-        </skinFile>
-        <skinFile>
-          <path>src\scss</path>
-          <name>_bootstrap-override.scss</name>
-        </skinFile>
-        <skinFile>
-          <path>src\scss</path>
-          <name>_variables-2sic.scss</name>
+          <name>theme.scss</name>
         </skinFile>
         <skinFile>
           <path>src\scss</path>
@@ -226,7 +230,7 @@ SOFTWARE.</license>
         </skinFile>
         <skinFile>
           <path>src\ts</path>
-          <name>main.ts</name>
+          <name>theme.ts</name>
         </skinFile>
         <skinFile>
           <name>CHANGELOG-bs3-bs4.md</name>
@@ -241,10 +245,19 @@ SOFTWARE.</license>
           <name>default.jpg</name>
         </skinFile>
         <skinFile>
+          <name>favicon.png</name>
+        </skinFile>
+        <skinFile>
           <name>InvisibleContainer.zip</name>
         </skinFile>
         <skinFile>
           <name>koi.json</name>
+        </skinFile>
+        <skinFile>
+          <name>landingpage.ascx</name>
+        </skinFile>
+        <skinFile>
+          <name>landingpage.jpg</name>
         </skinFile>
         <skinFile>
           <name>LICENSE</name>
@@ -256,25 +269,25 @@ SOFTWARE.</license>
           <name>package.json</name>
         </skinFile>
         <skinFile>
-          <name>README.md</name>
+          <name>readme.md</name>
         </skinFile>
         <skinFile>
           <name>thumbnail_default.jpg</name>
         </skinFile>
         <skinFile>
+          <name>thumbnail_landingpage.jpg</name>
+        </skinFile>
+        <skinFile>
           <name>tsconfig.json</name>
         </skinFile>
         <skinFile>
-          <name>webpack.dev.js</name>
-        </skinFile>
-        <skinFile>
-          <name>webpack.prod.js</name>
+          <name>webpack.config.js</name>
         </skinFile>
       </skinFiles>
     </component>
   </components>
-</package>
-<package name="Invisible Container" type="Container" version="1.2.0">
+  </package>
+  <package name="Invisible Container" type="Container" version="1.2.0">
   <friendlyName>Invisible Container</friendlyName>
   <description>Invisible Container</description>
   <iconFile />
@@ -322,5 +335,6 @@ SOFTWARE.</license>
       </containerFiles>
     </component>
   </components>
-</package></packages>
+</package>
+</packages>
 </dotnetnuke>
