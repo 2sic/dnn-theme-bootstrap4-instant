@@ -1,4 +1,4 @@
-<img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap4-instant/wiki/assets/logo-1000.png">
+<img width="100%" src="https://github.com/2sic/dnn-theme-bootstrap4-instant/raw/master/images/logo-1000.png">
 
 # DNN Skin/Theme Bootstrap4 Instant! for DNN 7, 8, 9
 
