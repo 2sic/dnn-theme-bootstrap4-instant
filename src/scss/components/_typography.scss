@@ -3,41 +3,15 @@
 // @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
 
 @media all {
-
+	h1, h2 ,h3, h4, h5, h6 {
+		font-family:$font-family-base;
+	}
 	body, p, .Normal, li p {
 		font-size: $font-size-base;
 		line-height: 1.6em;
 	}
 	p { margin-bottom: $font-size-base * 0.6875; }
-	h1, h2 ,h3, h4, h5, h6 {
-		font-family:$font-family-base;
-	}
-	h1, h2 { 
-		font-weight: $headings-font-weight;
-	}
-	h1 { 
-		font-size: $h1-font-size/1.5;
-		margin-top: 22px;
-		margin-bottom: 11px;	
-		@include media-breakpoint-up(lg) {
-			font-size: $h1-font-size;
-		}
-	}
-    h2 { 
-		font-size: $h2-font-size/1.3;
-		@include media-breakpoint-up(lg) {
-			font-size: $h2-font-size;
-		}
-	}
-    h3 { 
-		font-size: $h3-font-size/1.2;
-		@include media-breakpoint-up(lg) {
-			font-size: $h3-font-size;
-		}
-	}
-	h3, h4, h5, h6 {
-		font-weight: 700;
-	}
+
 	ul, ol {
 		padding-left:$grid-gutter-width;
 		margin: 0;
