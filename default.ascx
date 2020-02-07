@@ -131,7 +131,7 @@
 	protected override void OnLoad(EventArgs e)
 	{
 		base.OnLoad(e);
-		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no' />");
+		AttachCustomHeader("<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />");
 
 		// Set various FavIcon and Icon headers according to best practices
 		// The next line is disabled by default, because it requires RazorBlade to be installed.

@@ -10,6 +10,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    overflow: hidden;
     @include media-breakpoint-up(md) {
       right: 25px;
     }
@@ -102,7 +103,6 @@
       }
       .ly-logo {
         display: block;
-        width: 120px;
         img {
           width: 100%;
           max-width: 100%;
