@@ -1,6 +1,6 @@
 @using DotNetNuke.Web.DDRMenu;
-@using System.Dynamic; 
-@inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic> 
+@using System.Dynamic;
+@inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic>
 @{ var root = Model.Source.root; }
 
 @helper RenderNodes(IList<MenuNode> nodes) {
@@ -17,7 +17,7 @@
 				<li @classString>
 					@if (node.Enabled) {
 						<div class="ly-linkwrapper">
-                            <a @(node.Target == "_new" ? "target=\"_blank\"" : "") href="@node.Url">@node.Text</a>
+                            <a target="@(node.Target)" href="@node.Url">@node.Text</a>
                             @if (node.HasChildren())
                             {
                                 <div class="ly-navopener">
