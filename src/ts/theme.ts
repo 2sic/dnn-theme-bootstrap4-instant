@@ -71,7 +71,7 @@ $(function () {
 	$('.ly-top').on('click', () => {
 		$("html, body").animate({
 			scrollTop: 0
-		}, 1200, 'easeOutExpo');
+		}, 1200);
 		return false;
 	});
 
