@@ -5,12 +5,7 @@
   "tasks": [
     {
       "type": "npm",
-      "script": "copy-lib-bootstrap-js",
-      "problemMatcher": []
-    },
-    {
-      "type": "npm",
-      "script": "build",
+      "script": "build-prod",
       "group": "build",
       "problemMatcher": []
     }
