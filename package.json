@@ -27,8 +27,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
-    "@types/jquery": "^3.5.6",
     "bootstrap": "^4.4.1",
-    "popper.js": "^1.14.3"
+    "slidetoggle": "^3.2.2"
   }
 }
