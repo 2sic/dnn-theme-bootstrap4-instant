@@ -1,5 +1,5 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.11.0">
+  <packages><package name="dnn-theme-bootstrap4-instant" type="Skin" version="4.20.0">
   <friendlyName>Bootstrap 4 Instant</friendlyName>
   <description>A clean, prepared bootstrap 4 skin for DNN (DotNetNuke), ready to make awesomeness - ideally combined with bootstrap content-templates.</description>
   <iconFile>/Images/icon_skin.gif</iconFile>
@@ -66,6 +66,10 @@ SOFTWARE.</license>
         </skinFile>
         <skinFile>
           <path>controls</path>
+          <name>LanguageNavigation.ascx</name>
+        </skinFile>
+        <skinFile>
+          <path>controls</path>
           <name>optimize-page-title.ascx</name>
         </skinFile>
         <skinFile>
@@ -75,10 +79,6 @@ SOFTWARE.</license>
         <skinFile>
           <path>dist\lib</path>
           <name>bootstrap.min.js</name>
-        </skinFile>
-        <skinFile>
-          <path>dist\lib</path>
-          <name>jquery.min.js</name>
         </skinFile>
         <skinFile>
           <path>dist</path>
@@ -138,6 +138,14 @@ SOFTWARE.</license>
         </skinFile>
         <skinFile>
           <path>nav\main-mobile</path>
+          <name>template.cshtml</name>
+        </skinFile>
+        <skinFile>
+          <path>nav\nav-main-submenu</path>
+          <name>menudef.xml</name>
+        </skinFile>
+        <skinFile>
+          <path>nav\nav-main-submenu</path>
           <name>template.cshtml</name>
         </skinFile>
         <skinFile>

@@ -52,6 +52,7 @@ To get the awesome designed content, install [2sxc](https://github.com/2sic/2sxc
 * v4.20.00 2021-11-05 
   * removed jquery
   * added language switch
+  * added optional dropdown menu to main menu
 * v4.11.00 2021-10-22 updates npm packages
 
 ## Love from Switzerland
