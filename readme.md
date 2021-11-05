@@ -47,6 +47,13 @@ You now have created the layout within minutes or hours, but you're still missin
 
 To get the awesome designed content, install [2sxc](https://github.com/2sic/2sxc/releases) and the default bootstrap4 content-templates. You can then change the SCSS in the content-templates to also point to the `_variables.scss` of this skin, and re-generate all styles for an amazingly fast development workflow.
 
+## History
+
+* v4.20.00 2021-11-05 
+  * removed jquery
+  * added language switch
+* v4.11.00 2021-10-22 updates npm packages
+
 ## Love from Switzerland
 
 Daniel & Tom

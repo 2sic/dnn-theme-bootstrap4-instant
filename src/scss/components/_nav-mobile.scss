@@ -259,5 +259,32 @@
         }
       }
     }
+
+    /* Language Selection Styling */
+    .ly-language {
+      display: flex;
+      list-style: none;
+      font-size: 16px;
+      margin-top: 0;
+      margin-right: 0;
+      padding-right: 0;
+
+      > li {
+        display: inline-block;
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid #fff;
+
+        &:last-child {
+          padding-right: 0;
+          border-right: none;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

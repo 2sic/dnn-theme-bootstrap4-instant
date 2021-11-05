@@ -54,5 +54,30 @@
                 }
             }
         }
+
+        /* Language Selection Styling */
+        .ly-language {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            font-size: 12px;
+            margin-top: 0;
+            margin-right: 0;
+            padding-right: 0;
+  
+            >li {
+              display: inline-block;
+              padding-right: 5px;
+  
+              &:last-child {
+                padding-right: 0;
+              }
+  
+              a {
+                color: $secondary;
+                text-decoration: none;
+              }
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.DDRMenu.TemplateEngine" Assembly="DotNetNuke.Web.DDRMenu" %>
 <%@ Register TagPrefix="dnn" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
+<%@ Register TagPrefix="tosic" TagName="LanguageNavigation" src="controls/LanguageNavigation.ascx" %>
 
 <%-- Change the page title to contain the breadcrumbi in an SEO optimized way --%>
 <%@ Register TagPrefix="tosic" TagName="PageTitle" src="controls/optimize-page-title.ascx" %>
@@ -44,6 +45,7 @@
 				</div>
 				<div class="ly-nav-mobile-container">
 					<dnn:MENU MenuStyle="nav/main-mobile" NodeSelector="*,0,6" runat="server" />
+					<tosic:languagenavigation runat="server" Languages="en-US:EN,de-DE:DE" />
 				</div>
 			</nav>
 	<div id="nav-icon" class="ly-hamburger" title="Menu">
@@ -54,6 +56,7 @@
 				</div>
 			</div>
 			<nav id="nav-desktop" class="navbar d-none d-lg-block">
+        <tosic:languagenavigation runat="server" Languages="en-US:EN,de-DE:DE" />
 				<dnn:MENU MenuStyle="nav/main" NodeSelector="*,0,0" runat="server" />
 			</nav>
 		</div>
