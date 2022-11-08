@@ -12,6 +12,12 @@ A clean, prepared bootstrap4 skin for DNN (DotNetNuke), ready to make awesomenes
 1. And it's awesome together with professional content-templates like
     1. [Standard Content Blocks/Templates](https://github.com/2sic/2sxc-content-app)
 
+# Important: Check out Newer Bootstrap5 Version 🚀
+
+This repo uses Bootstrap 4 and will not be maintained any more. 
+We strongly suggest you check out the new 👉🏽 [2shine Bootstrap5](https://github.com/2sic/dnn-theme-2shine-bs5)
+
+
 # The Bootstrap4 Instant Theme for DNN
 
 This theme is a layout/skin for the CMS [DNN](https://github.com/dnnsoftware/Dnn.Platform) based on [Bootstrap4](http://getbootstrap.com/) and [SASS](http://sass-lang.com/). It allows you to create simple custom designs within minutes and complex designs within a few hours. This is why it's called *instant*.
